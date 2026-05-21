@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Central Parque - Gerador de QR Code</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Global Styles */
+    :root {
+      --primary-green: #1A3E2F;
+      --gold-accent: #C59B27;
+      --cream-bg: #FDFBF7;
+      --card-bg: #FFFFFF;
+      --text-color: #333333;
+      --border-color: #E2DDD5;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F4F2EE;
+      color: var(--text-color);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .setup-container {
+      width: 100%;
+      max-width: 500px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--primary-green);
+    }
+
+    .form-control {
+      width: 100%;
+      height: 48px;
+      border: 2px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0 12px;
+      font-size: 15px;
+      font-family: inherit;
+    }
+
+    .form-control:focus {
+      border-color: var(--gold-accent);
+      outline: none;
+    }
+
+    .btn-action {
+      height: 48px;
+      background-color: var(--primary-green);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color 0.2s ease;
+      margin-top: 10px;
+    }
+
+    .btn-action:hover {
+      background-color: #122B20;
+    }
+
+    .btn-print {
+      background-color: var(--gold-accent);
+      color: #1A3E2F;
+    }
+
+    .btn-print:hover {
+      background-color: #B28B21;
+    }
+
+    /* ==========================================================================
+       PRINTABLE TABLE SIGN (PREMIUM DESIGN)
+       ========================================================================== */
+    .printable-sign {
+      width: 100%;
+      max-width: 420px; /* Standard table tent / acrylic display size */
+      background-color: var(--cream-bg);
+      border: 12px double var(--gold-accent);
+      border-radius: 8px;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(26, 62, 47, 0.15);
+      position: relative;
+    }
+
+    /* Premium Border accents */
+    .printable-sign::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
+      border: 1px solid var(--gold-accent);
+      pointer-events: none;
+    }
+
+    .hotel-logo-icon {
+      font-size: 42px;
+      margin-bottom: 8px;
+      color: var(--primary-green);
+    }
+
+    .sign-hotel-name {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary-green);
+      margin-bottom: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    .sign-location {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-accent);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .qrcode-wrapper {
+      background-color: #FFFFFF;
+      padding: 16px;
+      border-radius: 12px;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .sign-title-pt {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary-green);
+      margin-bottom: 4px;
+    }
+
+    .sign-title-en {
+      font-size: 16px;
+      font-style: italic;
+      color: var(--gold-accent);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .divider-line {
+      width: 60px;
+      height: 2px;
+      background-color: var(--gold-accent);
+      margin: 12px 0;
+    }
+
+    .sign-desc-pt {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary-green);
+      line-height: 1.4;
+    }
+
+    .sign-desc-en {
+      font-size: 12px;
+      color: var(--primary-green);
+      opacity: 0.8;
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+
+    .table-number-placeholder {
+      margin-top: 24px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold-accent);
+      border: 1px solid var(--gold-accent);
+      padding: 4px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       PRINT MEDIA QUERIES (CRITICAL FOR PERFECT PRINT)
+       ========================================================================== */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      
+      .setup-container {
+        display: none; /* Hide configuration panel */
+      }
+
+      .printable-sign {
+        box-shadow: none;
+        border-color: #C59B27 !important; /* Force gold color in print */
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        width: 100%;
+        max-width: 480px;
+        margin: auto;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SETUP CONTROL BOX (Hidden during print) -->
+  <div class="setup-container">
+    <h2 style="margin-bottom: 16px; color: var(--primary-green);">Gerador de Placa de Mesa</h2>
+    
+    <div class="form-group">
+      <label for="urlInput">URL do Cardápio (Detectado Automaticamente):</label>
+      <input type="url" id="urlInput" class="form-control" placeholder="https://...">
+    </div>
+
+    <div class="form-group">
+      <label for="tableInput">Mesa (Opcional - Ex: Mesa 5):</label>
+      <input type="text" id="tableInput" class="form-control" placeholder="Ex: Mesa 03" value="Mesa ___">
+    </div>
+
+    <button id="btnGenerate" class="btn-action">Gerar Novo QR Code</button>
+    <button id="btnPrint" class="btn-action btn-print">🖨️ Imprimir Placa de Mesa</button>
+  </div>
+
+  <!-- THE PRINTABLE SIGN CARD -->
+  <div class="printable-sign" id="signCard">
+    <div class="hotel-logo-icon">🏨</div>
+    <div class="sign-hotel-name">Hotel Central Parque</div>
+    <div class="sign-location">São Lourenço • MG</div>
+    
+    <!-- QR Code rendered here -->
+    <div class="qrcode-wrapper">
+      <div id="qrcode"></div>
+    </div>
+
+    <div class="sign-title-pt">CARDÁPIO DIGITAL</div>
+    <div class="sign-title-en">Digital Restaurant Menu</div>
+    
+    <div class="divider-line"></div>
+    
+    <div class="sign-desc-pt">Aponte a câmera do celular para o QR Code para visualizar o cardápio do Chá da Tarde e Jantar.</div>
+    <div class="sign-desc-en">Scan the QR code with your phone camera to view the Afternoon Tea and Dinner menus.</div>
+
+    <div class="table-number-placeholder" id="tableDisplay">Mesa ___</div>
+  </div>
+
+  <!-- QR Code Generation Library -->
+  <script src="qrcode.min.js"></script>
+  
+  <script>
+    const urlInput = document.getElementById("urlInput");
+    const tableInput = document.getElementById("tableInput");
+    const btnGenerate = document.getElementById("btnGenerate");
+    const btnPrint = document.getElementById("btnPrint");
+    const tableDisplay = document.getElementById("tableDisplay");
+    
+    let qrcode = null;
+
+    // 1. Auto-detect menu location (points to index.html in the same directory)
+    function autoDetectUrl() {
+      const currentUrl = window.location.href;
+      // Replace qr-generator.html with index.html
+      const menuUrl = currentUrl.replace("qr-generator.html", "index.html");
+      urlInput.value = menuUrl;
+      return menuUrl;
+    }
+
+    // 2. Generate the QR Code
+    function renderQRCode(url) {
+      const qrContainer = document.getElementById("qrcode");
+      qrContainer.innerHTML = ""; // Clear existing
+
+      qrcode = new QRCode(qrContainer, {
+        text: url,
+        width: 220,
+        height: 220,
+        colorDark: "#1A3E2F", // dark green
+        colorLight: "#FDFBF7", // cream bg
+        correctLevel: QRCode.CorrectLevel.H // High error correction
+      });
+    }
+
+    // 3. Update table display and re-generate
+    function updateSign() {
+      const url = urlInput.value.trim() || autoDetectUrl();
+      const tableText = tableInput.value.trim() || "Mesa ___";
+      
+      tableDisplay.textContent = tableText;
+      renderQRCode(url);
+    }
+
+    // Event Listeners
+    btnGenerate.addEventListener("click", updateSign);
+    btnPrint.addEventListener("click", () => {
+      window.print();
+    });
+
+    tableInput.addEventListener("input", () => {
+      tableDisplay.textContent = tableInput.value.trim() || "Mesa ___";
+    });
+
+    // Initialize on page load
+    window.onload = () => {
+      const detectedUrl = autoDetectUrl();
+      renderQRCode(detectedUrl);
+    };
+  </script>
+</body>
+</html>

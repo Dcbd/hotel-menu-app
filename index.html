@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Central Parque - Cardápio Digital</title>
+  <!-- Google Fonts: Playfair Display for headers, Inter for readable body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light text-normal">
+
+  <!-- ACCESSIBILITY BAR (Top Sticky Bar) -->
+  <header class="accessibility-bar" id="accessibilityBar">
+    <div class="container accessibility-content">
+      <!-- Font Size Adjuster -->
+      <div class="accessibility-group">
+        <span class="accessibility-label" id="lblFontSize">Acessibilidade:</span>
+        <button class="btn-acc active" id="btnFontNormal" aria-label="Tamanho de texto normal" title="Texto Normal">A</button>
+        <button class="btn-acc" id="btnFontIncrease" aria-label="Aumentar tamanho do texto" title="Aumentar texto">A+</button>
+        <button class="btn-acc" id="btnFontHuge" aria-label="Aumentar muito o tamanho do texto" title="Texto Grande">A++</button>
+      </div>
+      <!-- Theme Switcher -->
+      <div class="accessibility-group">
+        <button class="btn-acc" id="btnThemeToggle" aria-label="Alternar modo escuro e claro" title="Alternar Modo Escuro/Claro">
+          <span class="theme-icon-light">☀️</span>
+          <span class="theme-icon-dark">🌙</span>
+        </button>
+        <!-- Language Switcher -->
+        <button class="btn-acc lang-toggle" id="btnLangToggle" aria-label="Change language to English">
+          <span class="lang-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="heroSection">
+    <div class="hero-image-wrapper">
+      <img src="images/hotel_banner.png" alt="Ilustração do Hotel Central Parque" class="hero-image" id="heroImage">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-text-container">
+      <h1 class="hotel-title" id="hotelTitle">Hotel Central Parque</h1>
+      <p class="hotel-location" id="hotelLocation">📍 São Lourenço, Minas Gerais</p>
+      <p class="hero-subtitle" id="heroSubtitle">Cardápio Digital de Gastronomia</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container main-content">
+    
+    <!-- CATEGORY NAVIGATION (STICKY TABS) -->
+    <nav class="category-nav" id="categoryNav" aria-label="Menu Sections">
+      <button class="nav-tab active" id="tabAfternoonTea" data-tab="afternoon-tea">
+        <span class="tab-icon">☕</span>
+        <span class="tab-title" id="txtTabAfternoonTea">Chá da Tarde</span>
+        <span class="tab-time" id="txtTimeAfternoonTea">16:00 - 18:30</span>
+      </button>
+      <button class="nav-tab" id="tabDinner" data-tab="dinner">
+        <span class="tab-icon">🍽️</span>
+        <span class="tab-title" id="txtTabDinner">Jantar</span>
+        <span class="tab-time" id="txtTimeDinner">19:30 - 22:30</span>
+      </button>
+    </nav>
+
+    <!-- SEARCH & DIET FILTERS -->
+    <section class="search-filter-section" id="searchFilterSection">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Pesquisar prato ou ingrediente..." aria-label="Pesquisar no cardápio">
+        <button id="btnClearSearch" class="btn-clear-search" aria-label="Limpar pesquisa" style="display: none;">✕</button>
+      </div>
+      
+      <!-- Diet Filter Badges -->
+      <div class="filter-badges-container" id="filterBadgesContainer">
+        <span class="filter-label" id="txtFilterLabel">Filtrar por:</span>
+        <div class="filter-scroll">
+          <button class="filter-chip" data-diet="gluten-free" id="chipGF">
+            <span class="chip-color gf-color"></span> Sem Glúten (SG)
+          </button>
+          <button class="filter-chip" data-diet="lactose-free" id="chipLF">
+            <span class="chip-color lf-color"></span> Sem Lactose (SL)
+          </button>
+          <button class="filter-chip" data-diet="vegetarian" id="chipVeg">
+            <span class="chip-color veg-color"></span> Vegetariano (VG)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NO RESULTS MESSAGE -->
+    <div id="noResultsMessage" class="no-results-card" style="display: none;">
+      <p id="txtNoResults">Nenhum prato encontrado com os filtros selecionados.</p>
+      <button id="btnResetFilters" class="btn-primary">Mostrar Todos os Pratos</button>
+    </div>
+
+    <!-- MENU LIST SECTION -->
+    <section class="menu-list" id="menuList" aria-live="polite">
+      <!-- Items will be generated dynamically by JavaScript -->
+    </section>
+
+  </main>
+
+  <!-- ASSISTANCE / SERVICE SECTION -->
+  <section class="service-section container" id="serviceSection">
+    <div class="service-card">
+      <h2 id="txtServiceTitle">Dúvidas ou Restrições?</h2>
+      <p id="txtServiceDesc">Se você possui alergias severas ou precisa de alguma alteração no prato, por favor fale com a nossa equipe.</p>
+      <div class="service-buttons">
+        <button class="btn-primary btn-large btn-ripple" id="btnCallWaiter">
+          <span class="btn-icon">🛎️</span> <span id="txtCallWaiterBtn">Chamar Garçom na Mesa</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="mainFooter">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">🏨</span>
+        <span class="footer-hotel-name">Hotel Central Parque</span>
+      </div>
+      <p class="footer-address" id="txtFooterAddress">Rua Dr. Mello Viana, 28 - Centro, São Lourenço - MG</p>
+      <p class="footer-phone" id="txtFooterPhone">📞 Recepção: (35) 3339-2300 | 🌐 www.hotelcentralparque.com.br</p>
+      <p class="footer-copyright">&copy; 2026 Hotel Central Parque. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- DETAIL POPUP MODAL -->
+  <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="btnModalClose" aria-label="Fechar detalhes">✕</button>
+      <div class="modal-image-wrapper">
+        <img src="" alt="" id="modalImage" class="modal-image">
+      </div>
+      <div class="modal-body">
+        <div class="modal-diet-tags" id="modalDietTags"></div>
+        <h2 id="modalTitle" class="modal-title">Nome do Prato</h2>
+        <div id="modalPrice" class="modal-price">R$ 0,00</div>
+        <div class="modal-divider"></div>
+        <h3 class="modal-section-title" id="lblModalIngredients">Ingredientes / Descrição:</h3>
+        <p id="modalDescription" class="modal-description">Descrição detalhada do prato com todos os ingredientes bem descritos para fácil visualização.</p>
+        <div class="modal-info-box" id="modalAccessibilityInfo">
+          <span class="info-icon">ℹ️</span>
+          <span id="txtModalAccInfo">Prato preparado seguindo rígidos padrões de higiene. Para alterações, consulte o garçom.</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="btnModalBack">Voltar ao Cardápio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALL WAITER MODAL -->
+  <div class="modal-backdrop" id="waiterModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container waiter-modal-width">
+      <button class="modal-close-btn" id="btnWaiterModalClose" aria-label="Fechar">✕</button>
+      <div class="modal-body text-center">
+        <div class="waiter-bell-animation">🔔</div>
+        <h2 id="waiterModalTitle">Chamar Garçom</h2>
+        <p id="waiterModalDesc">Selecione o número da sua mesa abaixo e clique no botão para chamar o garçom.</p>
+        
+        <div class="table-selector-wrapper">
+          <label for="tableNumberSelect" class="table-label" id="lblTableNumber">Número da Mesa:</label>
+          <select id="tableNumberSelect" class="table-select">
+            <option value="" disabled selected>Escolha sua mesa...</option>
+            <option value="1">Mesa 1</option>
+            <option value="2">Mesa 2</option>
+            <option value="3">Mesa 3</option>
+            <option value="4">Mesa 4</option>
+            <option value="5">Mesa 5</option>
+            <option value="6">Mesa 6</option>
+            <option value="7">Mesa 7</option>
+            <option value="8">Mesa 8</option>
+            <option value="9">Mesa 9</option>
+            <option value="10">Mesa 10</option>
+            <option value="Varanda 1">Varanda 1</option>
+            <option value="Varanda 2">Varanda 2</option>
+            <option value="Piscina 1">Piscina 1</option>
+            <option value="Piscina 2">Piscina 2</option>
+          </select>
+        </div>
+
+        <button class="btn-primary btn-large w-100" id="btnConfirmCallWaiter">Confirmar Chamado</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALL WAITER SUCCESS MODAL -->
+  <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container waiter-modal-width">
+      <div class="modal-body text-center">
+        <div class="success-icon-animation">✔️</div>
+        <h2 id="successModalTitle">Chamado Enviado!</h2>
+        <p id="successModalDesc">Um garçom está a caminho da sua mesa para lhe atender. Obrigado!</p>
+        <button class="btn-primary w-100" id="btnSuccessClose">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
