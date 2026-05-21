@@ -1,12 +1,9 @@
-// ==========================================================================
-// MENU DATA WITH MULTILINGUAL TEXT & METADATA
-// ==========================================================================
 const MENU_DATA = [
-  // AFTERNOON TEA ITEMS
+  // --- AFTERNOON TEA - LANCHES & SALGADOS ---
   {
     id: "tea-1",
     category: "afternoon-tea",
-    subcategory: "salgados",
+    subcategory: "lanches",
     price: 16.00,
     tags: ["gluten-free", "vegetarian"],
     image: "images/afternoon_tea.png",
@@ -22,7 +19,7 @@ const MENU_DATA = [
   {
     id: "tea-2",
     category: "afternoon-tea",
-    subcategory: "salgados",
+    subcategory: "lanches",
     price: 12.00,
     tags: ["vegetarian"],
     image: "images/afternoon_tea.png",
@@ -36,21 +33,231 @@ const MENU_DATA = [
     }
   },
   {
-    id: "tea-3",
+    id: "food-2",
     category: "afternoon-tea",
-    subcategory: "bebidas",
-    price: 10.00,
+    subcategory: "lanches",
+    price: 16.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Café Boa Tarde Individual",
+      en: "Individual Good Afternoon Coffee Combo"
+    },
+    description: {
+      pt: "Bule de café ou chá e de leite, pão francês, manteiga e geléia.",
+      en: "Pot of coffee or tea and milk, french bread, butter, and jam."
+    }
+  },
+  {
+    id: "food-8-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 9.00,
+    tags: [],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Misto Quente",
+      en: "Toasted Ham & Cheese"
+    },
+    description: {
+      pt: "Clássico sanduíche quente de pão francês ou de forma com presunto cozido e queijo mussarela derretido.",
+      en: "Classic hot sandwich made with french or sliced bread, cooked ham, and melted mozzarella cheese."
+    }
+  },
+  {
+    id: "food-13-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 8.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Queijo Quente",
+      en: "Grilled Cheese Sandwich"
+    },
+    description: {
+      pt: "Pão francês ou de forma dourado na chapa com uma porção generosa de queijo mussarela derretido.",
+      en: "French bread or sliced bread grilled on the griddle with a generous amount of melted mozzarella cheese."
+    }
+  },
+  {
+    id: "food-12-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 5.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Pão com Manteiga",
+      en: "Bread with Butter"
+    },
+    description: {
+      pt: "Pão francês fresquinho ou pão caseiro cortado ao meio e dourado na chapa com manteiga da fazenda.",
+      en: "Fresh french bread or homemade bread sliced in half and grilled with farm butter."
+    }
+  },
+  {
+    id: "food-15-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 7.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Torradas de Pão Integral",
+      en: "Whole Wheat Toast"
+    },
+    description: {
+      pt: "Duas fatias de pão integral tostadas, acompanhadas de manteiga da fazenda e geleia de frutas.",
+      en: "Two slices of toasted whole wheat bread, served with farm butter and fruit jam."
+    }
+  },
+  {
+    id: "food-9-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 16.00,
+    tags: ["gluten-free"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Omelete Misto",
+      en: "Ham & Cheese Omelet"
+    },
+    description: {
+      pt: "Omelete preparado com quatro ovos frescos da fazenda, presunto picado e queijo mussarela derretido.",
+      en: "Fluffy omelet made with four fresh farm eggs, diced ham, and melted mozzarella cheese."
+    }
+  },
+  {
+    id: "food-10-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 13.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Omelete Simples",
+      en: "Plain Omelet"
+    },
+    description: {
+      pt: "Omelete leve e fofinho preparado com quatro ovos frescos da fazenda na manteiga.",
+      en: "Light and fluffy omelet prepared with four fresh farm eggs cooked in butter."
+    }
+  },
+  {
+    id: "food-11-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 8.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Ovos Mexidos",
+      en: "Scrambled Eggs"
+    },
+    description: {
+      pt: "Dois ovos mexidos na chapa com um toque de manteiga da fazenda.",
+      en: "Two eggs scrambled on the griddle with a touch of farmhouse butter."
+    }
+  },
+  {
+    id: "por-1-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 9.00,
     tags: ["gluten-free", "lactose-free", "vegetarian"],
     image: "images/afternoon_tea.png",
     name: {
-      pt: "Café Gourmet das Montanhas",
-      en: "Mountain Gourmet Coffee"
+      pt: "Amendoim Torrado",
+      en: "Roasted Peanuts"
     },
     description: {
-      pt: "Café especial colhido nas montanhas da Mantiqueira, coado individualmente na mesa para você.",
-      en: "Specialty coffee harvested in the Mantiqueira mountains, individually brewed at your table."
+      pt: "Porção de amendoim Kiflor torrado e salgado de 400g.",
+      en: "Portion of 400g roasted and salted Kiflor peanuts."
     }
   },
+  {
+    id: "por-2-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 9.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Porção de Azeitonas",
+      en: "Portion of Olives"
+    },
+    description: {
+      pt: "Porção de azeitonas verdes médias com caroço Tozzi.",
+      en: "Portion of fresh medium green olives with pits."
+    }
+  },
+  {
+    id: "por-3-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 16.00,
+    tags: ["gluten-free", "lactose-free"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Calabresa Acebolada",
+      en: "Sautéed Calabresa Sausage"
+    },
+    description: {
+      pt: "Porção de linguiça calabresa fatiada acebolada grelhada na chapa.",
+      en: "Portion of sliced calabresa sausage sautéed with sweet onions on the griddle."
+    }
+  },
+  {
+    id: "por-4-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 13.00,
+    tags: ["gluten-free", "lactose-free"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Porção de Presunto Fatiado",
+      en: "Sliced Ham Portion"
+    },
+    description: {
+      pt: "Porção de presunto cozido de excelente qualidade, fatiado fino.",
+      en: "Portion of high-quality sliced cooked ham."
+    }
+  },
+  {
+    id: "por-5-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 13.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Porção de Queijo Minas",
+      en: "Minas Cheese Portion"
+    },
+    description: {
+      pt: "Porção de queijo Minas frescal fatiado ou em cubos.",
+      en: "Portion of traditional sliced or cubed Minas cheese."
+    }
+  },
+  {
+    id: "por-6-tea",
+    category: "afternoon-tea",
+    subcategory: "lanches",
+    price: 50.00,
+    tags: ["gluten-free"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Tábua de Frios Especial",
+      en: "Special Cold Cuts Platter"
+    },
+    description: {
+      pt: "Seleção generosa de frios finos fatiados: presunto, queijo mussarela, queijo prato, azeitonas e salame.",
+      en: "Generous platter of sliced cold cuts: ham, mozzarella cheese, prato cheese, olives, and salami."
+    }
+  },
+
+  // --- AFTERNOON TEA - DOCES & FRUTAS ---
   {
     id: "tea-4",
     category: "afternoon-tea",
@@ -65,6 +272,22 @@ const MENU_DATA = [
     description: {
       pt: "Bolo de cenoura fofinho com cobertura quente e generosa de chocolate belga meio amargo.",
       en: "Fluffy carrot cake topped with warm, generous Belgian dark chocolate ganache."
+    }
+  },
+  {
+    id: "food-6-tea",
+    category: "afternoon-tea",
+    subcategory: "doces",
+    price: 7.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Bolo do Dia (Fatia)",
+      en: "Cake of the Day (Slice)"
+    },
+    description: {
+      pt: "Fatia de bolo caseiro artesanal preparado no dia. Consulte os sabores disponíveis.",
+      en: "Slice of homemade artisanal cake baked fresh daily. Please ask our team for today's flavors."
     }
   },
   {
@@ -83,40 +306,337 @@ const MENU_DATA = [
       en: "Selection of fresh seasonal fruits produced by local organic growers in São Lourenço."
     }
   },
-
-  // DINNER ITEMS
   {
-    id: "dinner-1",
-    category: "dinner",
-    subcategory: "entradas",
-    price: 22.00,
-    tags: ["gluten-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Caldinho de Mandioca Mineiro",
-      en: "Minas Cassava Cream Soup"
-    },
-    description: {
-      pt: "Creme de mandioca encorpado com ervas da horta, finalizado com bacon crocante e cebolinha.",
-      en: "Rich cassava cream soup cooked with fresh herbs, finished with crispy bacon and scallions."
-    }
-  },
-  {
-    id: "dinner-2",
-    category: "dinner",
-    subcategory: "entradas",
-    price: 28.00,
+    id: "food-7-tea",
+    category: "afternoon-tea",
+    subcategory: "doces",
+    price: 7.00,
     tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
+    image: "images/afternoon_tea.png",
     name: {
-      pt: "Salada Primavera Orgânica",
-      en: "Organic Spring Salad"
+      pt: "Fruta da Estação",
+      en: "Seasonal Fruit"
     },
     description: {
-      pt: "Folhas jovens colhidas no dia, morangos frescos, nozes caramelizadas e molho de mostarda e mel.",
-      en: "Day-harvested baby greens, fresh strawberries, caramelized walnuts, and local honey mustard dressing."
+      pt: "Uma fruta pequena inteira ou uma fatia de fruta fresca, como melão, mamão ou melancia.",
+      en: "A small whole fruit or a slice of fresh seasonal fruit, such as melon, papaya, or watermelon."
     }
   },
+  {
+    id: "food-14",
+    category: "afternoon-tea",
+    subcategory: "doces",
+    price: 10.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Sequilhos / Biscoitos Caseiros",
+      en: "Homemade Cookies / Cornstarch Biscuits"
+    },
+    description: {
+      pt: "Porção de sequilhos ou biscoitos doces caseiros artesanais, crocantes e derretem na boca.",
+      en: "Portion of traditional homemade sweet biscuits, light, crispy, and melting in your mouth."
+    }
+  },
+  {
+    id: "food-16-tea",
+    category: "afternoon-tea",
+    subcategory: "doces",
+    price: 12.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Mingau",
+      en: "Porridge"
+    },
+    description: {
+      pt: "Prato fundo de mingau quentinho e cremoso de Aveia, Fubá ou Maisena com leite integral.",
+      en: "Warm and creamy bowl of Oatmeal, Cornmeal, or Cornstarch porridge cooked with whole milk."
+    }
+  },
+  {
+    id: "food-18-tea",
+    category: "afternoon-tea",
+    subcategory: "doces",
+    price: 8.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Doces Típicos da Época",
+      en: "Typical Seasonal Sweets"
+    },
+    description: {
+      pt: "Sobremesa individual de doces caseiros. Opções como canjica, arroz doce, compotas, pudim ou curau.",
+      en: "Individual portion of traditional homemade seasonal desserts. Options like sweet hominy, rice pudding, flan, or sweet corn pudding."
+    }
+  },
+
+  // --- AFTERNOON TEA - CAFÉS & BEBIDAS ---
+  {
+    id: "tea-3",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Cafés e Bebidas Quentes",
+      en: "Coffee & Hot Drinks"
+    },
+    price: 10.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Café Gourmet das Montanhas",
+      en: "Mountain Gourmet Coffee"
+    },
+    description: {
+      pt: "Café especial colhido nas montanhas da Mantiqueira, coado individualmente na mesa para você.",
+      en: "Specialty coffee harvested in the Mantiqueira mountains, individually brewed at your table."
+    }
+  },
+  {
+    id: "drink-1-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Cafés e Bebidas Quentes",
+      en: "Coffee & Hot Drinks"
+    },
+    price: 9.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Bule de Café, Leite ou Chá",
+      en: "Pot of Coffee, Milk, or Tea"
+    },
+    description: {
+      pt: "Servido quente em bule individual. Serve até duas xícaras.",
+      en: "Served warm in an individual pot. Yields up to two cups."
+    }
+  },
+  {
+    id: "drink-2-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Cafés e Bebidas Quentes",
+      en: "Coffee & Hot Drinks"
+    },
+    price: 12.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Chocolate Quente Especial",
+      en: "Special Hot Chocolate"
+    },
+    description: {
+      pt: "Bebida cremosa feita com leite integral, chocolate, canela, leite condensado e maisena.",
+      en: "Creamy hot drink made with whole milk, cocoa, cinnamon, condensed milk, and a touch of cornstarch."
+    }
+  },
+  {
+    id: "drink-3-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Cafés e Bebidas Quentes",
+      en: "Coffee & Hot Drinks"
+    },
+    price: 7.00,
+    tags: ["vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Chocolate Simples",
+      en: "Simple Hot Chocolate"
+    },
+    description: {
+      pt: "Bebida quente preparada com leite integral, chocolate em pó e açúcar ou adoçante.",
+      en: "Hot drink prepared with whole milk, cocoa powder, and sugar or sweetener."
+    }
+  },
+  {
+    id: "drink-4-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Sucos e Vitaminas",
+      en: "Juices & Smoothies"
+    },
+    price: 10.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Suco de Frutas Natural",
+      en: "Fresh Fruit Juice"
+    },
+    description: {
+      pt: "Copo de suco de frutas natural preparado na hora. Consulte as opções de frutas disponíveis.",
+      en: "Glass of freshly squeezed fruit juice. Please ask your waiter for available fruit options."
+    }
+  },
+  {
+    id: "drink-5-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Sucos e Vitaminas",
+      en: "Juices & Smoothies"
+    },
+    price: 12.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Vitamina de Frutas",
+      en: "Fruit Smoothie"
+    },
+    description: {
+      pt: "Copo de leite cremoso batido com mamão, maçã e banana. Rápido e nutritivo.",
+      en: "Nutritious glass of creamy milk blended with fresh papaya, apple, and banana."
+    }
+  },
+  {
+    id: "drink-6-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Água Mineral com Gás 500ml",
+      en: "Sparkling Mineral Water 500ml"
+    },
+    description: {
+      pt: "Água mineral com gás engarrafada fresca de 500ml.",
+      en: "Fresh bottled sparkling mineral water 500ml."
+    }
+  },
+  {
+    id: "drink-7-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Água Mineral sem Gás 500ml",
+      en: "Still Mineral Water 500ml"
+    },
+    description: {
+      pt: "Água mineral natural sem gás engarrafada fresca de 500ml.",
+      en: "Fresh bottled natural still mineral water 500ml."
+    }
+  },
+  {
+    id: "drink-8-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Água Tônica",
+      en: "Tonic Water"
+    },
+    description: {
+      pt: "Lata de água tônica refrescante de 350ml.",
+      en: "Refreshing canned tonic water 350ml."
+    }
+  },
+  {
+    id: "drink-9-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Coca-Cola",
+      en: "Coca-Cola"
+    },
+    description: {
+      pt: "Refrigerante Coca-Cola lata 350ml.",
+      en: "Canned Coca-Cola soda 350ml."
+    }
+  },
+  {
+    id: "drink-10-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Coca-Cola Zero",
+      en: "Coca-Cola Zero"
+    },
+    description: {
+      pt: "Refrigerante Coca-Cola sem açúcar lata 350ml.",
+      en: "Canned sugar-free Coca-Cola Zero soda 350ml."
+    }
+  },
+  {
+    id: "drink-11-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Guaraná Antarctica",
+      en: "Guaraná Antarctica"
+    },
+    description: {
+      pt: "Refrigerante Guaraná Antarctica lata 350ml.",
+      en: "Canned Guaraná Antarctica soda 350ml."
+    }
+  },
+  {
+    id: "drink-12-tea",
+    category: "afternoon-tea",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/afternoon_tea.png",
+    name: {
+      pt: "Guaraná Antarctica Zero",
+      en: "Guaraná Antarctica Zero"
+    },
+    description: {
+      pt: "Refrigerante Guaraná Antarctica sem açúcar lata 350ml.",
+      en: "Canned sugar-free Guaraná Antarctica Zero soda 350ml."
+    }
+  },
+
+
+  // ==========================================
+  // DINNER - PRATOS PRINCIPAIS
+  // ==========================================
   {
     id: "dinner-3",
     category: "dinner",
@@ -166,6 +686,386 @@ const MENU_DATA = [
     }
   },
   {
+    id: "food-3",
+    category: "dinner",
+    subcategory: "principais",
+    price: 25.00,
+    tags: [],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Espaguete à Bolonhesa",
+      en: "Spaghetti Bolognese"
+    },
+    description: {
+      pt: "Espaguete italiano clássico servido com molho bolonhesa caseiro de carne bovina e ervas aromáticas.",
+      en: "Classic Italian spaghetti served with homemade beef bolognese sauce and aromatic herbs."
+    }
+  },
+  {
+    id: "food-4",
+    category: "dinner",
+    subcategory: "principais",
+    price: 20.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Espaguete ao Alho e Óleo",
+      en: "Spaghetti Aglio e Olio"
+    },
+    description: {
+      pt: "Espaguete italiano clássico salteado em azeite de oliva extra virgem, alho laminado dourado e salsinha fresca.",
+      en: "Classic Italian spaghetti sautéed in extra virgin olive oil, golden sliced garlic, and fresh parsley."
+    }
+  },
+  {
+    id: "food-5",
+    category: "dinner",
+    subcategory: "principais",
+    price: 30.00,
+    tags: [],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Estrogonofe de Frango",
+      en: "Chicken Stroganoff"
+    },
+    description: {
+      pt: "Tiras de peito de frango grelhadas em molho cremoso de strogonoff. Acompanha arroz branco e batata palha.",
+      en: "Grilled chicken breast strips in a rich creamy stroganoff sauce. Served with white rice and crispy potato sticks."
+    }
+  },
+
+  // ==========================================
+  // DINNER - ENTRADAS E PORÇÕES (COM SEÇÕES)
+  // ==========================================
+  {
+    id: "dinner-1",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Entradas",
+      en: "Starters"
+    },
+    price: 22.00,
+    tags: ["gluten-free"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Caldinho de Mandioca Mineiro",
+      en: "Minas Cassava Cream Soup"
+    },
+    description: {
+      pt: "Creme de mandioca encorpado com ervas da horta, finalizado com bacon crocante e cebolinha.",
+      en: "Rich cassava cream soup cooked with fresh herbs, finished with crispy bacon and scallions."
+    }
+  },
+  {
+    id: "dinner-2",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Entradas",
+      en: "Starters"
+    },
+    price: 28.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Salada Primavera Orgânica",
+      en: "Organic Spring Salad"
+    },
+    description: {
+      pt: "Folhas jovens colhidas no dia, morangos frescos, nozes caramelizadas e molho de mostarda e mel.",
+      en: "Day-harvested baby greens, fresh strawberries, caramelized walnuts, and local honey mustard dressing."
+    }
+  },
+  {
+    id: "por-1-dinner",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Porções",
+      en: "Appetizers"
+    },
+    price: 9.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Amendoim Torrado",
+      en: "Roasted Peanuts"
+    },
+    description: {
+      pt: "Porção de amendoim Kiflor torrado e salgado de 400g.",
+      en: "Portion of 400g roasted and salted Kiflor peanuts."
+    }
+  },
+  {
+    id: "por-2-dinner",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Porções",
+      en: "Appetizers"
+    },
+    price: 9.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Porção de Azeitonas",
+      en: "Portion of Olives"
+    },
+    description: {
+      pt: "Porção de azeitonas verdes médias com caroço Tozzi.",
+      en: "Portion of fresh medium green olives with pits."
+    }
+  },
+  {
+    id: "por-3-dinner",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Porções",
+      en: "Appetizers"
+    },
+    price: 16.00,
+    tags: ["gluten-free", "lactose-free"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Calabresa Acebolada",
+      en: "Sautéed Calabresa Sausage"
+    },
+    description: {
+      pt: "Porção de linguiça calabresa fatiada acebolada grelhada na chapa.",
+      en: "Portion of sliced calabresa sausage sautéed with sweet onions on the griddle."
+    }
+  },
+  {
+    id: "por-4-dinner",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Porções",
+      en: "Appetizers"
+    },
+    price: 13.00,
+    tags: ["gluten-free", "lactose-free"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Porção de Presunto Fatiado",
+      en: "Sliced Ham Portion"
+    },
+    description: {
+      pt: "Porção de presunto cozido de excelente qualidade, fatiado fino.",
+      en: "Portion of high-quality sliced cooked ham."
+    }
+  },
+  {
+    id: "por-5-dinner",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Porções",
+      en: "Appetizers"
+    },
+    price: 13.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Porção de Queijo Minas",
+      en: "Minas Cheese Portion"
+    },
+    description: {
+      pt: "Porção de queijo Minas frescal fatiado ou em cubos.",
+      en: "Portion of traditional sliced or cubed Minas cheese."
+    }
+  },
+  {
+    id: "por-6-dinner",
+    category: "dinner",
+    subcategory: "entradas",
+    section: {
+      pt: "Porções",
+      en: "Appetizers"
+    },
+    price: 50.00,
+    tags: ["gluten-free"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Tábua de Frios Especial",
+      en: "Special Cold Cuts Platter"
+    },
+    description: {
+      pt: "Seleção generosa de frios finos fatiados: presunto, queijo mussarela, queijo prato, azeitonas e salame.",
+      en: "Generous platter of sliced cold cuts: ham, mozzarella cheese, prato cheese, olives, and salami."
+    }
+  },
+
+  // ==========================================
+  // DINNER - LANCHES E SOPAS
+  // ==========================================
+  {
+    id: "food-1",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 27.00,
+    tags: [],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Café Boa Noite Individual",
+      en: "Individual Good Night Coffee Combo"
+    },
+    description: {
+      pt: "Bule de café ou chá e de leite, 1 copo de suco, 1 pão de sal ou caseiro, 1 fatia de bolo, 4 sequilhos, 2 fatias de presunto e queijo, 2 manteiga, geléia ou mel e fruta da época.",
+      en: "Pot of coffee or tea and milk, 1 cup of juice, 1 french/homemade bread, 1 slice of cake, 4 corn starch cookies, 2 slices of ham and cheese, 2 butter portions, jam/honey, and seasonal fruit."
+    }
+  },
+  {
+    id: "food-17",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 20.00,
+    tags: [],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Sopa Individual",
+      en: "Individual Soup"
+    },
+    description: {
+      pt: "Canja de galinha quentinha servida com pão fatiado, torrada e manteiga. Consulte outras opções de sopa no ramal 268.",
+      en: "Warm chicken soup served with sliced bread, toast, and butter. Check other soup options by calling front desk extension 268."
+    }
+  },
+  {
+    id: "food-8-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 9.00,
+    tags: [],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Misto Quente",
+      en: "Toasted Ham & Cheese"
+    },
+    description: {
+      pt: "Clássico sanduíche quente de pão francês ou de forma com presunto cozido e queijo mussarela derretido.",
+      en: "Classic hot sandwich made with french or sliced bread, cooked ham, and melted mozzarella cheese."
+    }
+  },
+  {
+    id: "food-13-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 8.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Queijo Quente",
+      en: "Grilled Cheese Sandwich"
+    },
+    description: {
+      pt: "Pão francês ou de forma dourado na chapa com uma porção generosa de queijo mussarela derretido.",
+      en: "French bread or sliced bread grilled on the griddle with a generous amount of melted mozzarella cheese."
+    }
+  },
+  {
+    id: "food-12-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 5.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Pão com Manteiga",
+      en: "Bread with Butter"
+    },
+    description: {
+      pt: "Pão francês fresquinho ou pão caseiro cortado ao meio e dourado na chapa com manteiga da fazenda.",
+      en: "Fresh french bread or homemade bread sliced in half and grilled with farm butter."
+    }
+  },
+  {
+    id: "food-15-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 7.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Torradas de Pão Integral",
+      en: "Whole Wheat Toast"
+    },
+    description: {
+      pt: "Duas fatias de pão integral tostadas, acompanhadas de manteiga da fazenda e geleia de frutas.",
+      en: "Two slices of toasted whole wheat bread, served with farm butter and fruit jam."
+    }
+  },
+  {
+    id: "food-9-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 16.00,
+    tags: ["gluten-free"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Omelete Misto",
+      en: "Ham & Cheese Omelet"
+    },
+    description: {
+      pt: "Omelete preparado com quatro ovos frescos da fazenda, presunto picado e queijo mussarela derretido.",
+      en: "Fluffy omelet made with four fresh farm eggs, diced ham, and melted mozzarella cheese."
+    }
+  },
+  {
+    id: "food-10-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 13.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Omelete Simples",
+      en: "Plain Omelet"
+    },
+    description: {
+      pt: "Omelete leve e fofinho preparado com quatro ovos frescos da fazenda na manteiga.",
+      en: "Light and fluffy omelet prepared with four fresh farm eggs cooked in butter."
+    }
+  },
+  {
+    id: "food-11-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 8.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Ovos Mexidos",
+      en: "Scrambled Eggs"
+    },
+    description: {
+      pt: "Dois ovos mexidos na chapa com um toque de manteiga da fazenda.",
+      en: "Two eggs scrambled on the griddle with a touch of farmhouse butter."
+    }
+  },
+  {
+    id: "food-16-dinner",
+    category: "dinner",
+    subcategory: "lanches",
+    price: 12.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Mingau",
+      en: "Porridge"
+    },
+    description: {
+      pt: "Prato fundo de mingau quentinho e cremoso de Aveia, Fubá ou Maisena com leite integral.",
+      en: "Warm and creamy bowl of Oatmeal, Cornmeal, or Cornstarch porridge cooked with whole milk."
+    }
+  },
+
+  // ==========================================
+  // DINNER - SOBREMESAS E DOCES
+  // ==========================================
+  {
     id: "dinner-6",
     category: "dinner",
     subcategory: "sobremesas",
@@ -196,6 +1096,1087 @@ const MENU_DATA = [
       pt: "Fatias finas de queijo de Minas artesanal acompanhadas de goiabada cascão cremosa servida quente.",
       en: "Slices of raw artisanal Minas cheese served with warm, homemade creamy guava paste."
     }
+  },
+  {
+    id: "food-6-dinner",
+    category: "dinner",
+    subcategory: "sobremesas",
+    price: 7.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Bolo do Dia (Fatia)",
+      en: "Cake of the Day (Slice)"
+    },
+    description: {
+      pt: "Fatia de bolo caseiro artesanal preparado no dia. Consulte os sabores disponíveis.",
+      en: "Slice of homemade artisanal cake baked fresh daily. Please ask our team for today's flavors."
+    }
+  },
+  {
+    id: "food-7-dinner",
+    category: "dinner",
+    subcategory: "sobremesas",
+    price: 7.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Fruta da Estação",
+      en: "Seasonal Fruit"
+    },
+    description: {
+      pt: "Uma fruta pequena inteira ou uma fatia de fruta fresca, como melão, mamão ou melancia.",
+      en: "A small whole fruit or a slice of fresh seasonal fruit, such as melon, papaya, or watermelon."
+    }
+  },
+  {
+    id: "food-18-dinner",
+    category: "dinner",
+    subcategory: "sobremesas",
+    price: 8.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Doces Típicos da Época",
+      en: "Typical Seasonal Sweets"
+    },
+    description: {
+      pt: "Sobremesa individual de doces caseiros. Opções como canjica, arroz doce, compotas, pudim ou curau.",
+      en: "Individual portion of traditional homemade seasonal desserts. Options like sweet hominy, rice pudding, flan, or sweet corn pudding."
+    }
+  },
+
+  // ==========================================
+  // DINNER - BEBIDAS NÃO ALCOÓLICAS
+  // ==========================================
+  {
+    id: "drink-1-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Cafés e Bebidas Quentes",
+      en: "Coffee & Hot Drinks"
+    },
+    price: 9.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Bule de Café, Leite ou Chá",
+      en: "Pot of Coffee, Milk, or Tea"
+    },
+    description: {
+      pt: "Servido quente em bule individual. Serve até duas xícaras.",
+      en: "Served warm in an individual pot. Yields up to two cups."
+    }
+  },
+  {
+    id: "drink-2-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Cafés e Bebidas Quentes",
+      en: "Coffee & Hot Drinks"
+    },
+    price: 12.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Chocolate Quente Especial",
+      en: "Special Hot Chocolate"
+    },
+    description: {
+      pt: "Bebida cremosa feita com leite integral, chocolate, canela, leite condensado e maisena.",
+      en: "Creamy hot drink made with whole milk, cocoa, cinnamon, condensed milk, and a touch of cornstarch."
+    }
+  },
+  {
+    id: "drink-3-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Cafés e Bebidas Quentes",
+      en: "Coffee & Hot Drinks"
+    },
+    price: 7.00,
+    tags: ["vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Chocolate Simples",
+      en: "Simple Hot Chocolate"
+    },
+    description: {
+      pt: "Bebida quente preparada com leite integral, chocolate em pó e açúcar ou adoçante.",
+      en: "Hot drink prepared with whole milk, cocoa powder, and sugar or sweetener."
+    }
+  },
+  {
+    id: "drink-4-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Sucos e Vitaminas",
+      en: "Juices & Smoothies"
+    },
+    price: 10.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Suco de Frutas Natural",
+      en: "Fresh Fruit Juice"
+    },
+    description: {
+      pt: "Copo de suco de frutas natural preparado na hora. Consulte as opções de frutas disponíveis.",
+      en: "Glass of freshly squeezed fruit juice. Please ask your waiter for available fruit options."
+    }
+  },
+  {
+    id: "drink-5-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Sucos e Vitaminas",
+      en: "Juices & Smoothies"
+    },
+    price: 12.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Vitamina de Frutas",
+      en: "Fruit Smoothie"
+    },
+    description: {
+      pt: "Copo de leite cremoso batido com mamão, maçã e banana. Rápido e nutritivo.",
+      en: "Nutritious glass of creamy milk blended with fresh papaya, apple, and banana."
+    }
+  },
+  {
+    id: "drink-6-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Água Mineral com Gás 500ml",
+      en: "Sparkling Mineral Water 500ml"
+    },
+    description: {
+      pt: "Água mineral com gás engarrafada fresca de 500ml.",
+      en: "Fresh bottled sparkling mineral water 500ml."
+    }
+  },
+  {
+    id: "drink-7-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Água Mineral sem Gás 500ml",
+      en: "Still Mineral Water 500ml"
+    },
+    description: {
+      pt: "Água mineral natural sem gás engarrafada fresca de 500ml.",
+      en: "Fresh bottled natural still mineral water 500ml."
+    }
+  },
+  {
+    id: "drink-8-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Água Tônica",
+      en: "Tonic Water"
+    },
+    description: {
+      pt: "Lata de água tônica refrescante de 350ml.",
+      en: "Refreshing canned tonic water 350ml."
+    }
+  },
+  {
+    id: "drink-9-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Coca-Cola",
+      en: "Coca-Cola"
+    },
+    description: {
+      pt: "Refrigerante Coca-Cola lata 350ml.",
+      en: "Canned Coca-Cola soda 350ml."
+    }
+  },
+  {
+    id: "drink-10-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Coca-Cola Zero",
+      en: "Coca-Cola Zero"
+    },
+    description: {
+      pt: "Refrigerante Coca-Cola sem açúcar lata 350ml.",
+      en: "Canned sugar-free Coca-Cola Zero soda 350ml."
+    }
+  },
+  {
+    id: "drink-11-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Guaraná Antarctica",
+      en: "Guaraná Antarctica"
+    },
+    description: {
+      pt: "Refrigerante Guaraná Antarctica lata 350ml.",
+      en: "Canned Guaraná Antarctica soda 350ml."
+    }
+  },
+  {
+    id: "drink-12-dinner",
+    category: "dinner",
+    subcategory: "bebidas",
+    section: {
+      pt: "Águas e Refrigerantes",
+      en: "Water & Sodas"
+    },
+    price: 6.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Guaraná Antarctica Zero",
+      en: "Guaraná Antarctica Zero"
+    },
+    description: {
+      pt: "Refrigerante Guaraná Antarctica sem açúcar lata 350ml.",
+      en: "Canned sugar-free Guaraná Antarctica Zero soda 350ml."
+    }
+  },
+
+  // ==========================================
+  // DINNER - BEBIDAS ALCOÓLICAS
+  // ==========================================
+  // --- Cervejas ---
+  {
+    id: "alc-1",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Cervejas",
+      en: "Beers"
+    },
+    price: 7.50,
+    tags: ["lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Cerveja Bohemia",
+      en: "Bohemia Beer"
+    },
+    description: {
+      pt: "Cerveja Pilsen tradicional brasileira de sabor leve e maltado.",
+      en: "Traditional Brazilian Pilsner beer with a light, malty flavor."
+    }
+  },
+  {
+    id: "alc-2",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Cervejas",
+      en: "Beers"
+    },
+    price: 6.50,
+    tags: ["lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Cerveja Skol",
+      en: "Skol Beer"
+    },
+    description: {
+      pt: "Cerveja Pilsen leve, refrescante e de alta aceitação, servida gelada.",
+      en: "Very light, crisp, and refreshing Brazilian Pilsner beer, served ice cold."
+    }
+  },
+  {
+    id: "alc-3",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Cervejas",
+      en: "Beers"
+    },
+    price: 9.00,
+    tags: ["lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Cerveja Heineken",
+      en: "Heineken Beer"
+    },
+    description: {
+      pt: "Cerveja Premium Lager holandesa de sabor característico e marcante.",
+      en: "Dutch Premium Lager beer, featuring its signature crisp malt flavor."
+    }
+  },
+  // --- Drinks ---
+  {
+    id: "alc-4",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Drinks e Coquetéis",
+      en: "Drinks & Cocktails"
+    },
+    price: 16.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Caipirinha de Limão",
+      en: "Lime Caipirinha"
+    },
+    description: {
+      pt: "Clássico drink brasileiro feito com uma dose de cachaça de qualidade, dois limões frescos espremidos, açúcar e gelo.",
+      en: "Classic Brazilian cocktail made with a shot of cachaça, two fresh squeezed limes, sugar, and crushed ice."
+    }
+  },
+  {
+    id: "alc-5",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Drinks e Coquetéis",
+      en: "Drinks & Cocktails"
+    },
+    price: 16.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Caipirinha de Rum (Caipiríssima)",
+      en: "Rum Caipirinha (Caipiríssima)"
+    },
+    description: {
+      pt: "Variação saborosa da caipirinha preparada com rum importado, limão espremido, açúcar e gelo.",
+      en: "Tasty caipirinha variation prepared with imported white rum, squeezed lime, sugar, and ice."
+    }
+  },
+  {
+    id: "alc-6",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Drinks e Coquetéis",
+      en: "Drinks & Cocktails"
+    },
+    price: 16.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Caipirinha de Vodka (Caipiroska)",
+      en: "Vodka Caipirinha (Caipiroska)"
+    },
+    description: {
+      pt: "Versão moderna da caipirinha preparada com vodka nacional premium, limão fresco espremido, açúcar e bastante gelo.",
+      en: "Modern caipirinha version made with premium vodka, fresh squeezed lime, sugar, and ice."
+    }
+  },
+  {
+    id: "alc-7",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Drinks e Coquetéis",
+      en: "Drinks & Cocktails"
+    },
+    price: 14.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Cuba Libre",
+      en: "Cuba Libre"
+    },
+    description: {
+      pt: "Mistura refrescante de rum, refrigerante sabor cola e suco de limão fresco com gelo.",
+      en: "Refreshing blend of white rum, cola soda, and fresh lime juice served over ice."
+    }
+  },
+  {
+    id: "alc-8",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Drinks e Coquetéis",
+      en: "Drinks & Cocktails"
+    },
+    price: 15.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Malibu",
+      en: "Malibu Shot"
+    },
+    description: {
+      pt: "Dose de licor Malibu de coco com rum caribenho. Doce e tropical.",
+      en: "Shot of Malibu coconut liqueur blended with Caribbean rum. Sweet and tropical."
+    }
+  },
+  // --- Vinhos e Espumantes ---
+  {
+    id: "alc-9",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 120.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Miolo Reserva (Garrafa)",
+      en: "Miolo Reserva (Bottle)"
+    },
+    description: {
+      pt: "Vinho fino brasileiro da vinícola Miolo. Opções: Cabernet Sauvignon, Merlot ou Chardonnay.",
+      en: "Fine Brazilian wine from the Miolo winery. Available: Cabernet Sauvignon, Merlot, or Chardonnay."
+    }
+  },
+  {
+    id: "alc-10",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 70.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Miolo Seleção (Garrafa)",
+      en: "Miolo Seleção (Bottle)"
+    },
+    description: {
+      pt: "Vinho de mesa equilibrado da vinícola Miolo, ideal para acompanhar refeições.",
+      en: "Balanced table wine from the Miolo winery, perfect for pairing with your dinner."
+    }
+  },
+  {
+    id: "alc-11",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 40.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Vinho Piagentini (Garrafa)",
+      en: "Piagentini Wine (Bottle)"
+    },
+    description: {
+      pt: "Vinho nacional de sabor leve e frutado.",
+      en: "Traditional Brazilian wine with a light, fruity profile."
+    }
+  },
+  {
+    id: "alc-12",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 40.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Saint Germain (Garrafa)",
+      en: "Saint Germain (Bottle)"
+    },
+    description: {
+      pt: "Vinho de mesa nacional. Disponível em: Cabernet Franc, Merlot suave ou Assemblage suave.",
+      en: "Brazilian table wine. Available: Cabernet Franc, Sweet Merlot, or Sweet Assemblage."
+    }
+  },
+  {
+    id: "alc-13",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 13.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Taça de Vinho da Casa",
+      en: "House Wine Glass"
+    },
+    description: {
+      pt: "Uma dose de vinho selecionado da casa servido na taça.",
+      en: "A glass of our specially selected house wine."
+    }
+  },
+  {
+    id: "alc-14",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 10.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Taxa de Rolha",
+      en: "Corkage Fee"
+    },
+    description: {
+      pt: "Serviço cobrado para bebidas consumidas nas áreas comuns do hotel que não foram compradas no estabelecimento.",
+      en: "Service fee charged for beverages consumed in common areas of the hotel that were purchased outside."
+    }
+  },
+  {
+    id: "alc-15",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 50.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Concha y Toro Reservado (Garrafa)",
+      en: "Concha y Toro Reservado (Bottle)"
+    },
+    description: {
+      pt: "Tradicional vinho tinto chileno, de paladar equilibrado e frutado.",
+      en: "Traditional Chilean red wine, offering a balanced and fruity profile."
+    }
+  },
+  {
+    id: "alc-16",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 56.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Vinho Familiar (Garrafa)",
+      en: "Familiar Wine (Bottle)"
+    },
+    description: {
+      pt: "Vinho tinto seco nacional, clássico para refeições em família.",
+      en: "Traditional Brazilian dry red wine, a classic choice for family dining."
+    }
+  },
+  {
+    id: "alc-17",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 65.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Vinho Santa Helena (Garrafa)",
+      en: "Santa Helena Wine (Bottle)"
+    },
+    description: {
+      pt: "Vinho tinto chileno de prestígio. Disponível em Cabernet Sauvignon ou Merlot.",
+      en: "Prestigious Chilean red wine. Available: Cabernet Sauvignon or Merlot."
+    }
+  },
+  {
+    id: "alc-18",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 22.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Vinho do Porto (Dose)",
+      en: "Port Wine (Shot)"
+    },
+    description: {
+      pt: "Uma dose do tradicional e encorpado vinho fortificado português.",
+      en: "A shot of the traditional, sweet, and full-bodied Portuguese fortified wine."
+    }
+  },
+  {
+    id: "alc-19",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 260.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Chandon Brut (Garrafa)",
+      en: "Chandon Brut (Bottle)"
+    },
+    description: {
+      pt: "Espumante nacional premium de aroma fresco e frutado.",
+      en: "Premium Brazilian sparkling wine with a crisp, fruity aroma."
+    }
+  },
+  {
+    id: "alc-20",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Vinhos e Espumantes",
+      en: "Wines & Champagnes"
+    },
+    price: 260.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Chandon Demi-Sec (Garrafa)",
+      en: "Chandon Demi-Sec (Bottle)"
+    },
+    description: {
+      pt: "Espumante nacional premium, suavemente doce e equilibrado.",
+      en: "Premium Brazilian sparkling wine, smoothly sweet and balanced."
+    }
+  },
+  // --- Doses e Destilados ---
+  {
+    id: "alc-21",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 18.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Whisky Ballantine's 8 Anos (Dose)",
+      en: "Ballantine's 8 Years Whisky (Shot)"
+    },
+    description: {
+      pt: "Uma dose (50ml) do suave Whisky escocês blended de 8 anos.",
+      en: "One shot (50ml) of the smooth 8-year-old blended Scotch whisky."
+    }
+  },
+  {
+    id: "alc-22",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 26.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Whisky Chivas Regal 12 Anos (Dose)",
+      en: "Chivas Regal 12 Years Whisky (Shot)"
+    },
+    description: {
+      pt: "Uma dose (50ml) do refinado Whisky escocês premium envelhecido por 12 anos.",
+      en: "One shot (50ml) of the refined premium Scotch whisky aged for 12 years."
+    }
+  },
+  {
+    id: "alc-23",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 16.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Whisky Grant's 8 Anos (Dose)",
+      en: "Grant's 8 Years Whisky (Shot)"
+    },
+    description: {
+      pt: "Uma dose (50ml) do aromático Whisky escocês blended envelhecido por 8 anos.",
+      en: "One shot (50ml) of the aromatic blended Scotch whisky aged for 8 years."
+    }
+  },
+  {
+    id: "alc-24",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 11.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Whisky Passport Scotch (Dose)",
+      en: "Passport Scotch Whisky (Shot)"
+    },
+    description: {
+      pt: "Uma dose (50ml) do clássico Whisky blended escocês.",
+      en: "One shot (50ml) of the classic blended Scotch whisky."
+    }
+  },
+  {
+    id: "alc-25",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 16.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Whisky Johnnie Walker Red Label (Dose)",
+      en: "Johnnie Walker Red Label Whisky (Shot)"
+    },
+    description: {
+      pt: "Uma dose (50ml) do Whisky escocês Johnnie Walker Red Label de 8 anos.",
+      en: "One shot (50ml) of the famous Johnnie Walker Red Label blended Scotch whisky."
+    }
+  },
+  {
+    id: "alc-26",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Conhaque Domecq (Dose)",
+      en: "Domecq Brandy (Shot)"
+    },
+    description: {
+      pt: "Uma dose de conhaque nacional de sabor aveludado.",
+      en: "A shot of the traditional Brazilian brandy with a smooth finish."
+    }
+  },
+  {
+    id: "alc-27",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 7.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Conhaque Dreher (Dose)",
+      en: "Dreher Brandy (Shot)"
+    },
+    description: {
+      pt: "Uma dose do popular e tradicional conhaque brasileiro.",
+      en: "A shot of the classic and popular Brazilian brandy."
+    }
+  },
+  {
+    id: "alc-28",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Cachaça (Dose)",
+      en: "Cachaça (Shot)"
+    },
+    description: {
+      pt: "Uma dose de cachaça mineira tradicional de excelente qualidade.",
+      en: "A shot of premium traditional Minas sugar cane spirit."
+    }
+  },
+  {
+    id: "alc-29",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Gin (Dose)",
+      en: "Gin (Shot)"
+    },
+    description: {
+      pt: "Uma dose de gin aromático nacional de 50ml.",
+      en: "A shot of aromatic dry gin 50ml."
+    }
+  },
+  {
+    id: "alc-30",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Rum (Dose)",
+      en: "Rum (Shot)"
+    },
+    description: {
+      pt: "Uma dose de rum caribenho de alta qualidade de 50ml.",
+      en: "A shot of high-quality Caribbean rum 50ml."
+    }
+  },
+  {
+    id: "alc-31",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Doses e Destilados",
+      en: "Spirits & Shots"
+    },
+    price: 8.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Vodka (Dose)",
+      en: "Vodka (Shot)"
+    },
+    description: {
+      pt: "Uma dose de vodka premium nacional destilada de 50ml.",
+      en: "A shot of premium distilled vodka 50ml."
+    }
+  },
+  // --- Licores e Aperitivos ---
+  {
+    id: "alc-32",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 20.00,
+    tags: ["gluten-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Licor Amarula (Dose)",
+      en: "Amarula Cream Liqueur (Shot)"
+    },
+    description: {
+      pt: "Uma dose do cremoso licor sul-africano preparado com o fruto da marula.",
+      en: "A shot of the creamy South African liqueur made from wild marula fruit."
+    }
+  },
+  {
+    id: "alc-33",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 7.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Campari (Dose)",
+      en: "Campari (Shot)"
+    },
+    description: {
+      pt: "Uma dose do clássico aperitivo amargo italiano de coloração vermelha.",
+      en: "A shot of the classic Italian bitter herbal aperitif."
+    }
+  },
+  {
+    id: "alc-34",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 7.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Vermute Cinzano (Dose)",
+      en: "Cinzano Vermouth (Shot)"
+    },
+    description: {
+      pt: "Uma dose do tradicional vermute italiano aromático.",
+      en: "A shot of the traditional Italian vermouth."
+    }
+  },
+  {
+    id: "alc-35",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 30.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Licor Cointreau (Dose)",
+      en: "Cointreau Liqueur (Shot)"
+    },
+    description: {
+      pt: "Uma dose do famoso licor fino francês com sabor de cascas de laranja.",
+      en: "A shot of the famous French triple sec orange liqueur."
+    }
+  },
+  {
+    id: "alc-36",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 25.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Licor Frangelico (Dose)",
+      en: "Frangelico Liqueur (Shot)"
+    },
+    description: {
+      pt: "Uma dose do elegante licor italiano de avelãs e ervas finas.",
+      en: "A shot of the elegant Italian hazelnut and herb liqueur."
+    }
+  },
+  {
+    id: "alc-37",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 7.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Licores Nacionais (Dose)",
+      en: "National Liqueurs (Shot)"
+    },
+    description: {
+      pt: "Dose de licor nacional. Sabores: Menta, Cacau, Cereja, Strega, Tangerina ou Laranja.",
+      en: "A shot of Brazilian liqueur. Flavors: Mint, Cocoa, Cherry, Strega, Tangerine, or Orange."
+    }
+  },
+  {
+    id: "alc-38",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 15.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Licor Manischewitz Cereja (Dose)",
+      en: "Manischewitz Cherry Liqueur (Shot)"
+    },
+    description: {
+      pt: "Uma dose do tradicional licor kosher com sabor marcante de cereja americana.",
+      en: "A shot of the traditional sweet kosher liqueur with a distinct American cherry flavor."
+    }
+  },
+  {
+    id: "alc-39",
+    category: "dinner",
+    subcategory: "bebidas-alcoolicas",
+    section: {
+      pt: "Licores e Aperitivos",
+      en: "Liqueurs & Aperitifs"
+    },
+    price: 7.00,
+    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    image: "images/dinner_risotto.png",
+    name: {
+      pt: "Martini Vermute (Dose)",
+      en: "Martini Vermouth (Shot)"
+    },
+    description: {
+      pt: "Uma dose do icônico vermute italiano Martini (Bianco ou Rosso).",
+      en: "A shot of the iconic Italian vermouth Martini (Bianco or Rosso)."
+    }
   }
 ];
 
@@ -225,7 +2206,7 @@ const TRANSLATIONS = {
     badgeGF: "Sem Glúten",
     badgeLF: "Sem Lactose",
     badgeVeg: "Vegetariano",
-    lblModalIngredients: "Ingredientes / Descrição:",
+    lblModalIngredients: "Ingredientes / Description:",
     txtModalAccInfo: "Prato preparado seguindo rígidos padrões de higiene. Para alterações, consulte o garçom.",
     btnModalBack: "Voltar ao Cardápio"
   },
@@ -262,14 +2243,17 @@ const TRANSLATIONS = {
 // ==========================================================================
 const SUBCATEGORIES = {
   "afternoon-tea": [
-    { id: "salgados", pt: "Salgados", en: "Savory", icon: "🥐" },
-    { id: "bebidas", pt: "Bebidas", en: "Drinks", icon: "☕" },
-    { id: "doces", pt: "Doces", en: "Sweets", icon: "🍰" }
+    { id: "lanches", pt: "Lanches & Salgados", en: "Savory & Snacks", icon: "🥐" },
+    { id: "doces", pt: "Doces & Frutas", en: "Sweets & Fruits", icon: "🍰" },
+    { id: "bebidas", pt: "Cafés & Bebidas", en: "Coffee & Drinks", icon: "☕" }
   ],
   "dinner": [
-    { id: "entradas", pt: "Entradas", en: "Starters", icon: "🥗" },
     { id: "principais", pt: "Pratos Principais", en: "Main Courses", icon: "🥩" },
-    { id: "sobremesas", pt: "Sobremesas", en: "Desserts", icon: "🍨" }
+    { id: "entradas", pt: "Entradas & Porções", en: "Starters & Appetizers", icon: "🥗" },
+    { id: "lanches", pt: "Lanches & Sopas", en: "Snacks & Soups", icon: "🥪" },
+    { id: "sobremesas", pt: "Doces & Sobremesas", en: "Sweets & Desserts", icon: "🍨" },
+    { id: "bebidas", pt: "Bebidas", en: "Soft Drinks", icon: "🥤" },
+    { id: "bebidas-alcoolicas", pt: "Bebidas Alcoólicas", en: "Alcoholic Drinks", icon: "🍷" }
   ]
 };
 
@@ -280,7 +2264,7 @@ let currentLang = localStorage.getItem("lang") || "pt";
 let currentTheme = localStorage.getItem("theme") || "light";
 let currentTextSize = localStorage.getItem("textSize") || "normal";
 let currentCategory = "afternoon-tea";
-let currentSubcategory = "salgados";
+let currentSubcategory = "lanches";
 let searchQuery = "";
 let selectedDiets = new Set();
 
@@ -462,7 +2446,22 @@ function renderMenu() {
     noResultsMessage.style.display = "none";
     menuListEl.style.display = "flex";
 
+    let lastSection = null;
     filteredItems.forEach(item => {
+      // Check for section transitions
+      if (item.section) {
+        const sectionName = item.section[currentLang];
+        if (sectionName !== lastSection) {
+          const sectionHeader = document.createElement("h3");
+          sectionHeader.className = "menu-section-header";
+          sectionHeader.textContent = sectionName;
+          menuListEl.appendChild(sectionHeader);
+          lastSection = sectionName;
+        }
+      } else {
+        lastSection = null;
+      }
+      
       const card = createMenuCard(item);
       menuListEl.appendChild(card);
     });

@@ -140,10 +140,19 @@
       pointer-events: none;
     }
 
-    .hotel-logo-icon {
-      font-size: 42px;
-      margin-bottom: 8px;
-      color: var(--primary-green);
+    .sign-logo-container {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .sign-logo {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
 
     .sign-hotel-name {
@@ -277,7 +286,9 @@
 
   <!-- THE PRINTABLE SIGN CARD -->
   <div class="printable-sign" id="signCard">
-    <div class="hotel-logo-icon">🏨</div>
+    <div class="sign-logo-container">
+      <img src="images/lOGO-HCP.png" alt="Logo Hotel Central Parque" class="sign-logo">
+    </div>
     <div class="sign-hotel-name">Hotel Central Parque</div>
     <div class="sign-location">São Lourenço • MG</div>
     
