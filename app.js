@@ -6,6 +6,7 @@ const MENU_DATA = [
   {
     id: "tea-1",
     category: "afternoon-tea",
+    subcategory: "salgados",
     price: 16.00,
     tags: ["gluten-free", "vegetarian"],
     image: "images/afternoon_tea.png",
@@ -21,6 +22,7 @@ const MENU_DATA = [
   {
     id: "tea-2",
     category: "afternoon-tea",
+    subcategory: "salgados",
     price: 12.00,
     tags: ["vegetarian"],
     image: "images/afternoon_tea.png",
@@ -36,6 +38,7 @@ const MENU_DATA = [
   {
     id: "tea-3",
     category: "afternoon-tea",
+    subcategory: "bebidas",
     price: 10.00,
     tags: ["gluten-free", "lactose-free", "vegetarian"],
     image: "images/afternoon_tea.png",
@@ -51,6 +54,7 @@ const MENU_DATA = [
   {
     id: "tea-4",
     category: "afternoon-tea",
+    subcategory: "doces",
     price: 14.00,
     tags: ["vegetarian"],
     image: "images/afternoon_tea.png",
@@ -66,6 +70,7 @@ const MENU_DATA = [
   {
     id: "tea-5",
     category: "afternoon-tea",
+    subcategory: "doces",
     price: 18.00,
     tags: ["gluten-free", "lactose-free", "vegetarian"],
     image: "images/afternoon_tea.png",
@@ -83,6 +88,7 @@ const MENU_DATA = [
   {
     id: "dinner-1",
     category: "dinner",
+    subcategory: "entradas",
     price: 22.00,
     tags: ["gluten-free"],
     image: "images/dinner_risotto.png",
@@ -98,6 +104,7 @@ const MENU_DATA = [
   {
     id: "dinner-2",
     category: "dinner",
+    subcategory: "entradas",
     price: 28.00,
     tags: ["gluten-free", "lactose-free", "vegetarian"],
     image: "images/dinner_risotto.png",
@@ -113,6 +120,7 @@ const MENU_DATA = [
   {
     id: "dinner-3",
     category: "dinner",
+    subcategory: "principais",
     price: 78.00,
     tags: ["gluten-free"],
     image: "images/dinner_risotto.png",
@@ -128,6 +136,7 @@ const MENU_DATA = [
   {
     id: "dinner-4",
     category: "dinner",
+    subcategory: "principais",
     price: 68.00,
     tags: ["gluten-free"],
     image: "images/dinner_risotto.png",
@@ -143,6 +152,7 @@ const MENU_DATA = [
   {
     id: "dinner-5",
     category: "dinner",
+    subcategory: "principais",
     price: 56.00,
     tags: ["vegetarian"],
     image: "images/dinner_risotto.png",
@@ -158,6 +168,7 @@ const MENU_DATA = [
   {
     id: "dinner-6",
     category: "dinner",
+    subcategory: "sobremesas",
     price: 24.00,
     tags: ["vegetarian"],
     image: "images/dinner_risotto.png",
@@ -173,6 +184,7 @@ const MENU_DATA = [
   {
     id: "dinner-7",
     category: "dinner",
+    subcategory: "sobremesas",
     price: 20.00,
     tags: ["gluten-free", "vegetarian"],
     image: "images/dinner_risotto.png",
@@ -197,8 +209,8 @@ const TRANSLATIONS = {
     txtTabAfternoonTea: "Chá da Tarde",
     txtTimeAfternoonTea: "16:00 - 18:30",
     txtTabDinner: "Jantar",
-    txtTimeDinner: "19:30 - 22:30",
-    searchInputPlaceholder: "Pesquisar prato ou ingrediente...",
+    txtTimeDinner: "19:00 - 21:30",
+    searchInput: "Pesquisar prato ou ingrediente...",
     txtFilterLabel: "Filtrar por:",
     chipGF: "<span class='chip-color gf-color'></span> Sem Glúten (SG)",
     chipLF: "<span class='chip-color lf-color'></span> Sem Lactose (SL)",
@@ -207,7 +219,6 @@ const TRANSLATIONS = {
     btnResetFilters: "Mostrar Todos os Pratos",
     txtServiceTitle: "Dúvidas ou Restrições?",
     txtServiceDesc: "Se você possui alergias severas ou precisa de alguma alteração no prato, por favor fale com a nossa equipe.",
-    txtCallWaiterBtn: "Chamar Garçom na Mesa",
     txtFooterAddress: "Rua Dr. Mello Viana, 28 - Centro, São Lourenço - MG",
     txtFooterPhone: "📞 Recepção: (35) 3339-2300 | 🌐 www.hotelcentralparque.com.br",
     btnCardDetails: "Ver Detalhes",
@@ -216,19 +227,7 @@ const TRANSLATIONS = {
     badgeVeg: "Vegetariano",
     lblModalIngredients: "Ingredientes / Descrição:",
     txtModalAccInfo: "Prato preparado seguindo rígidos padrões de higiene. Para alterações, consulte o garçom.",
-    btnModalBack: "Voltar ao Cardápio",
-    waiterModalTitle: "Chamar Garçom",
-    waiterModalDesc: "Selecione o número da sua mesa abaixo e clique no botão para chamar o garçom.",
-    lblTableNumber: "Número da Mesa:",
-    btnConfirmCallWaiter: "Confirmar Chamado",
-    tablePlaceholder: "Escolha sua mesa...",
-    tableText: "Mesa",
-    tableVaranda: "Varanda",
-    tablePiscina: "Piscina",
-    successModalTitle: "Chamado Enviado!",
-    successModalDesc: "Um garçom está a caminho da sua mesa para lhe atender. Obrigado!",
-    btnSuccessClose: "Entendido",
-    btnLangToggle: "EN"
+    btnModalBack: "Voltar ao Cardápio"
   },
   en: {
     lblFontSize: "Accessibility:",
@@ -236,8 +235,8 @@ const TRANSLATIONS = {
     txtTabAfternoonTea: "Afternoon Tea",
     txtTimeAfternoonTea: "4:00 PM - 6:30 PM",
     txtTabDinner: "Dinner",
-    txtTimeDinner: "7:30 PM - 10:30 PM",
-    searchInputPlaceholder: "Search dish or ingredient...",
+    txtTimeDinner: "7:00 PM - 9:30 PM",
+    searchInput: "Search dish or ingredient...",
     txtFilterLabel: "Filter by:",
     chipGF: "<span class='chip-color gf-color'></span> Gluten-Free (GF)",
     chipLF: "<span class='chip-color lf-color'></span> Lactose-Free (LF)",
@@ -246,7 +245,6 @@ const TRANSLATIONS = {
     btnResetFilters: "Show All Dishes",
     txtServiceTitle: "Allergies or Requests?",
     txtServiceDesc: "If you have severe allergies or need dish alterations, please let our team know.",
-    txtCallWaiterBtn: "Call Waiter to Table",
     txtFooterAddress: "28 Dr. Mello Viana St - Downtown, São Lourenço - MG",
     txtFooterPhone: "📞 Front Desk: (35) 3339-2300 | 🌐 www.hotelcentralparque.com.br",
     btnCardDetails: "View Details",
@@ -255,20 +253,24 @@ const TRANSLATIONS = {
     badgeVeg: "Vegetarian",
     lblModalIngredients: "Ingredients / Description:",
     txtModalAccInfo: "Dish prepared following strict sanitary protocols. For modifications, ask your waiter.",
-    btnModalBack: "Back to Menu",
-    waiterModalTitle: "Call Waiter",
-    waiterModalDesc: "Select your table number below and click the button to call the waiter.",
-    lblTableNumber: "Table Number:",
-    btnConfirmCallWaiter: "Confirm Request",
-    tablePlaceholder: "Choose your table...",
-    tableText: "Table",
-    tableVaranda: "Veranda",
-    tablePiscina: "Pool",
-    successModalTitle: "Request Sent!",
-    successModalDesc: "A waiter is on the way to assist you. Thank you!",
-    btnSuccessClose: "Got it",
-    btnLangToggle: "PT"
+    btnModalBack: "Back to Menu"
   }
+};
+
+// ==========================================================================
+// SUBCATEGORIES CONFIGURATION
+// ==========================================================================
+const SUBCATEGORIES = {
+  "afternoon-tea": [
+    { id: "salgados", pt: "Salgados", en: "Savory", icon: "🥐" },
+    { id: "bebidas", pt: "Bebidas", en: "Drinks", icon: "☕" },
+    { id: "doces", pt: "Doces", en: "Sweets", icon: "🍰" }
+  ],
+  "dinner": [
+    { id: "entradas", pt: "Entradas", en: "Starters", icon: "🥗" },
+    { id: "principais", pt: "Pratos Principais", en: "Main Courses", icon: "🥩" },
+    { id: "sobremesas", pt: "Sobremesas", en: "Desserts", icon: "🍨" }
+  ]
 };
 
 // ==========================================================================
@@ -278,6 +280,7 @@ let currentLang = localStorage.getItem("lang") || "pt";
 let currentTheme = localStorage.getItem("theme") || "light";
 let currentTextSize = localStorage.getItem("textSize") || "normal";
 let currentCategory = "afternoon-tea";
+let currentSubcategory = "salgados";
 let searchQuery = "";
 let selectedDiets = new Set();
 
@@ -289,8 +292,8 @@ const btnClearSearch = document.getElementById("btnClearSearch");
 const btnResetFilters = document.getElementById("btnResetFilters");
 const noResultsMessage = document.getElementById("noResultsMessage");
 const detailModal = document.getElementById("detailModal");
-const waiterModal = document.getElementById("waiterModal");
-const successModal = document.getElementById("successModal");
+const subcategoryContainer = document.getElementById("subcategoryContainer");
+const subcategoryNav = document.getElementById("subcategoryNav");
 
 // ==========================================================================
 // INITIALIZATION
@@ -353,15 +356,19 @@ function handleFontBtnClick(id) {
 // ==========================================================================
 function applyLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem("lang", lang);
+  try {
+    localStorage.setItem("lang", lang);
+  } catch (e) {
+    console.warn("Storage access not allowed:", e);
+  }
 
   // Translate static UI elements
   const dict = TRANSLATIONS[lang];
   for (const [id, value] of Object.entries(dict)) {
     const el = document.getElementById(id);
     if (el) {
-      if (id === "searchInputPlaceholder") {
-        searchInput.setAttribute("placeholder", value);
+      if (id === "searchInput") {
+        el.setAttribute("placeholder", value);
       } else if (id.startsWith("chip")) {
         el.innerHTML = value;
       } else {
@@ -370,8 +377,14 @@ function applyLanguage(lang) {
     }
   }
 
-  // Update button text for toggle
-  document.getElementById("btnLangToggle").querySelector(".lang-text").textContent = lang === "pt" ? "EN" : "PT";
+  // Update button text for toggle safely
+  const langTextEl = document.querySelector("#btnLangToggle .lang-text");
+  if (langTextEl) {
+    langTextEl.textContent = lang === "pt" ? "EN" : "PT";
+  }
+
+  // Render subcategories so they update their text language
+  renderSubcategories();
 
   // Re-render menu to display translated items
   renderMenu();
@@ -380,6 +393,34 @@ function applyLanguage(lang) {
 function toggleLanguage() {
   const nextLang = currentLang === "pt" ? "en" : "pt";
   applyLanguage(nextLang);
+}
+
+function renderSubcategories() {
+  if (!subcategoryNav) return;
+  subcategoryNav.innerHTML = "";
+  
+  const list = SUBCATEGORIES[currentCategory] || [];
+  list.forEach(sub => {
+    const btn = document.createElement("button");
+    btn.className = `btn-sub ${currentSubcategory === sub.id ? "active" : ""}`;
+    btn.setAttribute("data-sub", sub.id);
+    btn.setAttribute("aria-label", currentLang === "pt" ? `Categoria ${sub.pt}` : `Category ${sub.en}`);
+    
+    const label = currentLang === "pt" ? sub.pt : sub.en;
+    btn.innerHTML = `
+      <span class="btn-sub-icon">${sub.icon}</span>
+      <span class="btn-sub-label">${label}</span>
+    `;
+    
+    btn.addEventListener("click", () => {
+      currentSubcategory = sub.id;
+      document.querySelectorAll(".btn-sub").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderMenu();
+    });
+    
+    subcategoryNav.appendChild(btn);
+  });
 }
 
 // ==========================================================================
@@ -392,6 +433,9 @@ function renderMenu() {
   const filteredItems = MENU_DATA.filter(item => {
     // Category check
     if (item.category !== currentCategory) return false;
+    
+    // Subcategory check
+    if (item.subcategory !== currentSubcategory) return false;
     
     // Diet check
     if (selectedDiets.size > 0) {
@@ -520,42 +564,7 @@ function closeDetailsModal() {
   document.body.style.overflow = "";
 }
 
-function openWaiterModal() {
-  waiterModal.classList.add("show");
-  waiterModal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-}
 
-function closeWaiterModal() {
-  waiterModal.classList.remove("show");
-  waiterModal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
-}
-
-function triggerSuccessCall() {
-  const tableVal = document.getElementById("tableNumberSelect").value;
-  if (!tableVal) {
-    alert(currentLang === "pt" ? "Por favor, selecione uma mesa." : "Please select a table.");
-    return;
-  }
-  
-  // Close the main waiter dialog
-  closeWaiterModal();
-
-  // Show success confirmation
-  successModal.classList.add("show");
-  successModal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-
-  // Simulate resetting table selection
-  document.getElementById("tableNumberSelect").value = "";
-}
-
-function closeSuccessModal() {
-  successModal.classList.remove("show");
-  successModal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
-}
 
 // Make globally accessible for onclick events
 window.openDetailsModal = openDetailsModal;
@@ -583,6 +592,14 @@ function setupEventListeners() {
       targetTab.classList.add("active");
       
       currentCategory = targetTab.getAttribute("data-tab");
+      
+      // Set default subcategory for the selected category
+      const list = SUBCATEGORIES[currentCategory] || [];
+      if (list.length > 0) {
+        currentSubcategory = list[0].id;
+      }
+      
+      renderSubcategories();
       renderMenu();
       
       // Smooth scroll back to top of menu list
@@ -647,12 +664,5 @@ function setupEventListeners() {
     if (e.target === detailModal) closeDetailsModal();
   });
 
-  // Waiter modal listeners
-  document.getElementById("btnCallWaiter").addEventListener("click", openWaiterModal);
-  document.getElementById("btnWaiterModalClose").addEventListener("click", closeWaiterModal);
-  document.getElementById("waiterModal").addEventListener("click", (e) => {
-    if (e.target === waiterModal) closeWaiterModal();
-  });
-  document.getElementById("btnConfirmCallWaiter").addEventListener("click", triggerSuccessCall);
-  document.getElementById("btnSuccessClose").addEventListener("click", closeSuccessModal);
+
 }
