@@ -1,37 +1,6 @@
 const MENU_DATA = [
   // --- AFTERNOON TEA - LANCHES & SALGADOS ---
-  {
-    id: "tea-1",
-    category: "afternoon-tea",
-    subcategory: "lanches",
-    price: 16.00,
-    tags: ["gluten-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Pão de Queijo Recheado",
-      en: "Stuffed Cheese Bread"
-    },
-    description: {
-      pt: "Tradicional pão de queijo mineiro recheado com queijo Canastra derretido ou doce de leite Viçosa.",
-      en: "Traditional Minas cheese bread stuffed with melted Canastra cheese or sweet Viçosa milk caramel."
-    }
-  },
-  {
-    id: "tea-2",
-    category: "afternoon-tea",
-    subcategory: "lanches",
-    price: 12.00,
-    tags: ["vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Broa de Milho na Chapa",
-      en: "Grilled Corn Cake"
-    },
-    description: {
-      pt: "Fatia generosa de broa de milho mineira artesanal grelhada na chapa com manteiga da fazenda.",
-      en: "Generous slice of artisanal corn broa cake grilled on the griddle with fresh farmhouse butter."
-    }
-  },
+
   {
     id: "food-2",
     category: "afternoon-tea",
@@ -161,119 +130,24 @@ const MENU_DATA = [
     }
   },
   {
-    id: "por-1-tea",
+    id: "food-16-tea",
     category: "afternoon-tea",
     subcategory: "lanches",
-    price: 9.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
+    price: 12.00,
+    tags: ["vegetarian"],
     image: "images/afternoon_tea.png",
     name: {
-      pt: "Amendoim Torrado",
-      en: "Roasted Peanuts"
+      pt: "Mingau",
+      en: "Porridge"
     },
     description: {
-      pt: "Porção de amendoim Kiflor torrado e salgado de 400g.",
-      en: "Portion of 400g roasted and salted Kiflor peanuts."
-    }
-  },
-  {
-    id: "por-2-tea",
-    category: "afternoon-tea",
-    subcategory: "lanches",
-    price: 9.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Porção de Azeitonas",
-      en: "Portion of Olives"
-    },
-    description: {
-      pt: "Porção de azeitonas verdes médias com caroço Tozzi.",
-      en: "Portion of fresh medium green olives with pits."
-    }
-  },
-  {
-    id: "por-3-tea",
-    category: "afternoon-tea",
-    subcategory: "lanches",
-    price: 16.00,
-    tags: ["gluten-free", "lactose-free"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Calabresa Acebolada",
-      en: "Sautéed Calabresa Sausage"
-    },
-    description: {
-      pt: "Porção de linguiça calabresa fatiada acebolada grelhada na chapa.",
-      en: "Portion of sliced calabresa sausage sautéed with sweet onions on the griddle."
-    }
-  },
-  {
-    id: "por-4-tea",
-    category: "afternoon-tea",
-    subcategory: "lanches",
-    price: 13.00,
-    tags: ["gluten-free", "lactose-free"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Porção de Presunto Fatiado",
-      en: "Sliced Ham Portion"
-    },
-    description: {
-      pt: "Porção de presunto cozido de excelente qualidade, fatiado fino.",
-      en: "Portion of high-quality sliced cooked ham."
-    }
-  },
-  {
-    id: "por-5-tea",
-    category: "afternoon-tea",
-    subcategory: "lanches",
-    price: 13.00,
-    tags: ["gluten-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Porção de Queijo Minas",
-      en: "Minas Cheese Portion"
-    },
-    description: {
-      pt: "Porção de queijo Minas frescal fatiado ou em cubos.",
-      en: "Portion of traditional sliced or cubed Minas cheese."
-    }
-  },
-  {
-    id: "por-6-tea",
-    category: "afternoon-tea",
-    subcategory: "lanches",
-    price: 50.00,
-    tags: ["gluten-free"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Tábua de Frios Especial",
-      en: "Special Cold Cuts Platter"
-    },
-    description: {
-      pt: "Seleção generosa de frios finos fatiados: presunto, queijo mussarela, queijo prato, azeitonas e salame.",
-      en: "Generous platter of sliced cold cuts: ham, mozzarella cheese, prato cheese, olives, and salami."
+      pt: "Prato fundo de mingau quentinho e cremoso de Aveia, Fubá ou Maisena com leite integral.",
+      en: "Warm and creamy bowl of Oatmeal, Cornmeal, or Cornstarch porridge cooked with whole milk."
     }
   },
 
   // --- AFTERNOON TEA - DOCES & FRUTAS ---
-  {
-    id: "tea-4",
-    category: "afternoon-tea",
-    subcategory: "doces",
-    price: 14.00,
-    tags: ["vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Bolo de Cenoura da Vovó",
-      en: "Grandma's Carrot Cake"
-    },
-    description: {
-      pt: "Bolo de cenoura fofinho com cobertura quente e generosa de chocolate belga meio amargo.",
-      en: "Fluffy carrot cake topped with warm, generous Belgian dark chocolate ganache."
-    }
-  },
+
   {
     id: "food-6-tea",
     category: "afternoon-tea",
@@ -290,22 +164,7 @@ const MENU_DATA = [
       en: "Slice of homemade artisanal cake baked fresh daily. Please ask our team for today's flavors."
     }
   },
-  {
-    id: "tea-5",
-    category: "afternoon-tea",
-    subcategory: "doces",
-    price: 18.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Salada de Frutas com Mel",
-      en: "Fruit Salad with Local Honey"
-    },
-    description: {
-      pt: "Seleção de frutas frescas da estação produzidas por produtores locais de São Lourenço.",
-      en: "Selection of fresh seasonal fruits produced by local organic growers in São Lourenço."
-    }
-  },
+
   {
     id: "food-7-tea",
     category: "afternoon-tea",
@@ -339,22 +198,6 @@ const MENU_DATA = [
     }
   },
   {
-    id: "food-16-tea",
-    category: "afternoon-tea",
-    subcategory: "doces",
-    price: 12.00,
-    tags: ["vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Mingau",
-      en: "Porridge"
-    },
-    description: {
-      pt: "Prato fundo de mingau quentinho e cremoso de Aveia, Fubá ou Maisena com leite integral.",
-      en: "Warm and creamy bowl of Oatmeal, Cornmeal, or Cornstarch porridge cooked with whole milk."
-    }
-  },
-  {
     id: "food-18-tea",
     category: "afternoon-tea",
     subcategory: "doces",
@@ -372,26 +215,7 @@ const MENU_DATA = [
   },
 
   // --- AFTERNOON TEA - CAFÉS & BEBIDAS ---
-  {
-    id: "tea-3",
-    category: "afternoon-tea",
-    subcategory: "bebidas",
-    section: {
-      pt: "Cafés e Bebidas Quentes",
-      en: "Coffee & Hot Drinks"
-    },
-    price: 10.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Café Gourmet das Montanhas",
-      en: "Mountain Gourmet Coffee"
-    },
-    description: {
-      pt: "Café especial colhido nas montanhas da Mantiqueira, coado individualmente na mesa para você.",
-      en: "Specialty coffee harvested in the Mantiqueira mountains, individually brewed at your table."
-    }
-  },
+
   {
     id: "drink-1-tea",
     category: "afternoon-tea",
@@ -532,166 +356,19 @@ const MENU_DATA = [
       en: "Fresh bottled natural still mineral water 500ml."
     }
   },
-  {
-    id: "drink-8-tea",
-    category: "afternoon-tea",
-    subcategory: "bebidas",
-    section: {
-      pt: "Águas e Refrigerantes",
-      en: "Water & Sodas"
-    },
-    price: 6.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Água Tônica",
-      en: "Tonic Water"
-    },
-    description: {
-      pt: "Lata de água tônica refrescante de 350ml.",
-      en: "Refreshing canned tonic water 350ml."
-    }
-  },
-  {
-    id: "drink-9-tea",
-    category: "afternoon-tea",
-    subcategory: "bebidas",
-    section: {
-      pt: "Águas e Refrigerantes",
-      en: "Water & Sodas"
-    },
-    price: 6.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Coca-Cola",
-      en: "Coca-Cola"
-    },
-    description: {
-      pt: "Refrigerante Coca-Cola lata 350ml.",
-      en: "Canned Coca-Cola soda 350ml."
-    }
-  },
-  {
-    id: "drink-10-tea",
-    category: "afternoon-tea",
-    subcategory: "bebidas",
-    section: {
-      pt: "Águas e Refrigerantes",
-      en: "Water & Sodas"
-    },
-    price: 6.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Coca-Cola Zero",
-      en: "Coca-Cola Zero"
-    },
-    description: {
-      pt: "Refrigerante Coca-Cola sem açúcar lata 350ml.",
-      en: "Canned sugar-free Coca-Cola Zero soda 350ml."
-    }
-  },
-  {
-    id: "drink-11-tea",
-    category: "afternoon-tea",
-    subcategory: "bebidas",
-    section: {
-      pt: "Águas e Refrigerantes",
-      en: "Water & Sodas"
-    },
-    price: 6.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Guaraná Antarctica",
-      en: "Guaraná Antarctica"
-    },
-    description: {
-      pt: "Refrigerante Guaraná Antarctica lata 350ml.",
-      en: "Canned Guaraná Antarctica soda 350ml."
-    }
-  },
-  {
-    id: "drink-12-tea",
-    category: "afternoon-tea",
-    subcategory: "bebidas",
-    section: {
-      pt: "Águas e Refrigerantes",
-      en: "Water & Sodas"
-    },
-    price: 6.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/afternoon_tea.png",
-    name: {
-      pt: "Guaraná Antarctica Zero",
-      en: "Guaraná Antarctica Zero"
-    },
-    description: {
-      pt: "Refrigerante Guaraná Antarctica sem açúcar lata 350ml.",
-      en: "Canned sugar-free Guaraná Antarctica Zero soda 350ml."
-    }
-  },
 
 
   // ==========================================
   // DINNER - PRATOS PRINCIPAIS
   // ==========================================
-  {
-    id: "dinner-3",
-    category: "dinner",
-    subcategory: "principais",
-    price: 78.00,
-    tags: ["gluten-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Filé Mignon ao Risoto de Canastra",
-      en: "Filet Mignon & Canastra Risotto"
-    },
-    description: {
-      pt: "Medalhão de filé mignon ao molho demi-glace de vinho tinto, acompanhado de risoto cremoso de queijo Canastra.",
-      en: "Beef tenderloin medallion with red wine demi-glace sauce, served with creamy Canastra cheese risotto."
-    }
-  },
-  {
-    id: "dinner-4",
-    category: "dinner",
-    subcategory: "principais",
-    price: 68.00,
-    tags: ["gluten-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Truta Grelhada da Mantiqueira",
-      en: "Grilled Mantiqueira Trout"
-    },
-    description: {
-      pt: "Filé de truta fresca grelhada com amêndoas tostadas na manteiga de ervas e purê cremoso de mandioquinha.",
-      en: "Fresh trout fillet grilled with toasted almonds in herb butter, served with creamy yellow cassava purée."
-    }
-  },
-  {
-    id: "dinner-5",
-    category: "dinner",
-    subcategory: "principais",
-    price: 56.00,
-    tags: ["vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Nhoque de Mandioquinha",
-      en: "Cassava Gnocchi"
-    },
-    description: {
-      pt: "Nhoque artesanal de mandioquinha ao molho de tomates frescos da horta e folhas de manjericão orgânico.",
-      en: "Handmade yellow cassava gnocchi served with fresh garden tomato sauce and organic basil leaves."
-    }
-  },
+
   {
     id: "food-3",
     category: "dinner",
     subcategory: "principais",
     price: 25.00,
     tags: [],
-    image: "images/dinner_risotto.png",
+    image: "images/spaghetti_bolognese.jpg",
     name: {
       pt: "Espaguete à Bolonhesa",
       en: "Spaghetti Bolognese"
@@ -707,7 +384,7 @@ const MENU_DATA = [
     subcategory: "principais",
     price: 20.00,
     tags: ["vegetarian"],
-    image: "images/dinner_risotto.png",
+    image: "images/spaghetti_aglio_olio.jpg",
     name: {
       pt: "Espaguete ao Alho e Óleo",
       en: "Spaghetti Aglio e Olio"
@@ -723,7 +400,7 @@ const MENU_DATA = [
     subcategory: "principais",
     price: 30.00,
     tags: [],
-    image: "images/dinner_risotto.png",
+    image: "images/chicken_stroganoff.jpg",
     name: {
       pt: "Estrogonofe de Frango",
       en: "Chicken Stroganoff"
@@ -733,197 +410,13 @@ const MENU_DATA = [
       en: "Grilled chicken breast strips in a rich creamy stroganoff sauce. Served with white rice and crispy potato sticks."
     }
   },
-
-  // ==========================================
-  // DINNER - ENTRADAS E PORÇÕES (COM SEÇÕES)
-  // ==========================================
-  {
-    id: "dinner-1",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Entradas",
-      en: "Starters"
-    },
-    price: 22.00,
-    tags: ["gluten-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Caldinho de Mandioca Mineiro",
-      en: "Minas Cassava Cream Soup"
-    },
-    description: {
-      pt: "Creme de mandioca encorpado com ervas da horta, finalizado com bacon crocante e cebolinha.",
-      en: "Rich cassava cream soup cooked with fresh herbs, finished with crispy bacon and scallions."
-    }
-  },
-  {
-    id: "dinner-2",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Entradas",
-      en: "Starters"
-    },
-    price: 28.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Salada Primavera Orgânica",
-      en: "Organic Spring Salad"
-    },
-    description: {
-      pt: "Folhas jovens colhidas no dia, morangos frescos, nozes caramelizadas e molho de mostarda e mel.",
-      en: "Day-harvested baby greens, fresh strawberries, caramelized walnuts, and local honey mustard dressing."
-    }
-  },
-  {
-    id: "por-1-dinner",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Porções",
-      en: "Appetizers"
-    },
-    price: 9.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Amendoim Torrado",
-      en: "Roasted Peanuts"
-    },
-    description: {
-      pt: "Porção de amendoim Kiflor torrado e salgado de 400g.",
-      en: "Portion of 400g roasted and salted Kiflor peanuts."
-    }
-  },
-  {
-    id: "por-2-dinner",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Porções",
-      en: "Appetizers"
-    },
-    price: 9.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Porção de Azeitonas",
-      en: "Portion of Olives"
-    },
-    description: {
-      pt: "Porção de azeitonas verdes médias com caroço Tozzi.",
-      en: "Portion of fresh medium green olives with pits."
-    }
-  },
-  {
-    id: "por-3-dinner",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Porções",
-      en: "Appetizers"
-    },
-    price: 16.00,
-    tags: ["gluten-free", "lactose-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Calabresa Acebolada",
-      en: "Sautéed Calabresa Sausage"
-    },
-    description: {
-      pt: "Porção de linguiça calabresa fatiada acebolada grelhada na chapa.",
-      en: "Portion of sliced calabresa sausage sautéed with sweet onions on the griddle."
-    }
-  },
-  {
-    id: "por-4-dinner",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Porções",
-      en: "Appetizers"
-    },
-    price: 13.00,
-    tags: ["gluten-free", "lactose-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Porção de Presunto Fatiado",
-      en: "Sliced Ham Portion"
-    },
-    description: {
-      pt: "Porção de presunto cozido de excelente qualidade, fatiado fino.",
-      en: "Portion of high-quality sliced cooked ham."
-    }
-  },
-  {
-    id: "por-5-dinner",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Porções",
-      en: "Appetizers"
-    },
-    price: 13.00,
-    tags: ["gluten-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Porção de Queijo Minas",
-      en: "Minas Cheese Portion"
-    },
-    description: {
-      pt: "Porção de queijo Minas frescal fatiado ou em cubos.",
-      en: "Portion of traditional sliced or cubed Minas cheese."
-    }
-  },
-  {
-    id: "por-6-dinner",
-    category: "dinner",
-    subcategory: "entradas",
-    section: {
-      pt: "Porções",
-      en: "Appetizers"
-    },
-    price: 50.00,
-    tags: ["gluten-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Tábua de Frios Especial",
-      en: "Special Cold Cuts Platter"
-    },
-    description: {
-      pt: "Seleção generosa de frios finos fatiados: presunto, queijo mussarela, queijo prato, azeitonas e salame.",
-      en: "Generous platter of sliced cold cuts: ham, mozzarella cheese, prato cheese, olives, and salami."
-    }
-  },
-
-  // ==========================================
-  // DINNER - LANCHES E SOPAS
-  // ==========================================
-  {
-    id: "food-1",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 27.00,
-    tags: [],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Café Boa Noite Individual",
-      en: "Individual Good Night Coffee Combo"
-    },
-    description: {
-      pt: "Bule de café ou chá e de leite, 1 copo de suco, 1 pão de sal ou caseiro, 1 fatia de bolo, 4 sequilhos, 2 fatias de presunto e queijo, 2 manteiga, geléia ou mel e fruta da época.",
-      en: "Pot of coffee or tea and milk, 1 cup of juice, 1 french/homemade bread, 1 slice of cake, 4 corn starch cookies, 2 slices of ham and cheese, 2 butter portions, jam/honey, and seasonal fruit."
-    }
-  },
   {
     id: "food-17",
     category: "dinner",
-    subcategory: "lanches",
+    subcategory: "principais",
     price: 20.00,
     tags: [],
-    image: "images/dinner_risotto.png",
+    image: "images/chicken_soup.jpg",
     name: {
       pt: "Sopa Individual",
       en: "Individual Soup"
@@ -933,170 +426,11 @@ const MENU_DATA = [
       en: "Warm chicken soup served with sliced bread, toast, and butter. Check other soup options by calling front desk extension 268."
     }
   },
-  {
-    id: "food-8-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 9.00,
-    tags: [],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Misto Quente",
-      en: "Toasted Ham & Cheese"
-    },
-    description: {
-      pt: "Clássico sanduíche quente de pão francês ou de forma com presunto cozido e queijo mussarela derretido.",
-      en: "Classic hot sandwich made with french or sliced bread, cooked ham, and melted mozzarella cheese."
-    }
-  },
-  {
-    id: "food-13-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 8.00,
-    tags: ["vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Queijo Quente",
-      en: "Grilled Cheese Sandwich"
-    },
-    description: {
-      pt: "Pão francês ou de forma dourado na chapa com uma porção generosa de queijo mussarela derretido.",
-      en: "French bread or sliced bread grilled on the griddle with a generous amount of melted mozzarella cheese."
-    }
-  },
-  {
-    id: "food-12-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 5.00,
-    tags: ["vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Pão com Manteiga",
-      en: "Bread with Butter"
-    },
-    description: {
-      pt: "Pão francês fresquinho ou pão caseiro cortado ao meio e dourado na chapa com manteiga da fazenda.",
-      en: "Fresh french bread or homemade bread sliced in half and grilled with farm butter."
-    }
-  },
-  {
-    id: "food-15-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 7.00,
-    tags: ["vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Torradas de Pão Integral",
-      en: "Whole Wheat Toast"
-    },
-    description: {
-      pt: "Duas fatias de pão integral tostadas, acompanhadas de manteiga da fazenda e geleia de frutas.",
-      en: "Two slices of toasted whole wheat bread, served with farm butter and fruit jam."
-    }
-  },
-  {
-    id: "food-9-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 16.00,
-    tags: ["gluten-free"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Omelete Misto",
-      en: "Ham & Cheese Omelet"
-    },
-    description: {
-      pt: "Omelete preparado com quatro ovos frescos da fazenda, presunto picado e queijo mussarela derretido.",
-      en: "Fluffy omelet made with four fresh farm eggs, diced ham, and melted mozzarella cheese."
-    }
-  },
-  {
-    id: "food-10-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 13.00,
-    tags: ["gluten-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Omelete Simples",
-      en: "Plain Omelet"
-    },
-    description: {
-      pt: "Omelete leve e fofinho preparado com quatro ovos frescos da fazenda na manteiga.",
-      en: "Light and fluffy omelet prepared with four fresh farm eggs cooked in butter."
-    }
-  },
-  {
-    id: "food-11-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 8.00,
-    tags: ["gluten-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Ovos Mexidos",
-      en: "Scrambled Eggs"
-    },
-    description: {
-      pt: "Dois ovos mexidos na chapa com um toque de manteiga da fazenda.",
-      en: "Two eggs scrambled on the griddle with a touch of farmhouse butter."
-    }
-  },
-  {
-    id: "food-16-dinner",
-    category: "dinner",
-    subcategory: "lanches",
-    price: 12.00,
-    tags: ["vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Mingau",
-      en: "Porridge"
-    },
-    description: {
-      pt: "Prato fundo de mingau quentinho e cremoso de Aveia, Fubá ou Maisena com leite integral.",
-      en: "Warm and creamy bowl of Oatmeal, Cornmeal, or Cornstarch porridge cooked with whole milk."
-    }
-  },
 
   // ==========================================
   // DINNER - SOBREMESAS E DOCES
   // ==========================================
-  {
-    id: "dinner-6",
-    category: "dinner",
-    subcategory: "sobremesas",
-    price: 24.00,
-    tags: ["vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Petit Gâteau de Doce de Leite",
-      en: "Viçosa Caramel Lava Cake"
-    },
-    description: {
-      pt: "Bolo quente e úmido de doce de leite Viçosa com recheio cremoso e sorvete artesanal de creme.",
-      en: "Warm and moist Viçosa milk caramel cake with running caramel center, served with vanilla ice cream."
-    }
-  },
-  {
-    id: "dinner-7",
-    category: "dinner",
-    subcategory: "sobremesas",
-    price: 20.00,
-    tags: ["gluten-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Romeu e Julieta Central Parque",
-      en: "Romeo & Juliet Central Parque"
-    },
-    description: {
-      pt: "Fatias finas de queijo de Minas artesanal acompanhadas de goiabada cascão cremosa servida quente.",
-      en: "Slices of raw artisanal Minas cheese served with warm, homemade creamy guava paste."
-    }
-  },
+
   {
     id: "food-6-dinner",
     category: "dinner",
@@ -1227,26 +561,6 @@ const MENU_DATA = [
     description: {
       pt: "Copo de suco de frutas natural preparado na hora. Consulte as opções de frutas disponíveis.",
       en: "Glass of freshly squeezed fruit juice. Please ask your waiter for available fruit options."
-    }
-  },
-  {
-    id: "drink-5-dinner",
-    category: "dinner",
-    subcategory: "bebidas",
-    section: {
-      pt: "Sucos e Vitaminas",
-      en: "Juices & Smoothies"
-    },
-    price: 12.00,
-    tags: ["gluten-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Vitamina de Frutas",
-      en: "Fruit Smoothie"
-    },
-    description: {
-      pt: "Copo de leite cremoso batido com mamão, maçã e banana. Rápido e nutritivo.",
-      en: "Nutritious glass of creamy milk blended with fresh papaya, apple, and banana."
     }
   },
   {
@@ -1654,26 +968,6 @@ const MENU_DATA = [
     description: {
       pt: "Uma dose de vinho selecionado da casa servido na taça.",
       en: "A glass of our specially selected house wine."
-    }
-  },
-  {
-    id: "alc-14",
-    category: "dinner",
-    subcategory: "bebidas-alcoolicas",
-    section: {
-      pt: "Vinhos e Espumantes",
-      en: "Wines & Champagnes"
-    },
-    price: 10.00,
-    tags: ["gluten-free", "lactose-free", "vegetarian"],
-    image: "images/dinner_risotto.png",
-    name: {
-      pt: "Taxa de Rolha",
-      en: "Corkage Fee"
-    },
-    description: {
-      pt: "Serviço cobrado para bebidas consumidas nas áreas comuns do hotel que não foram compradas no estabelecimento.",
-      en: "Service fee charged for beverages consumed in common areas of the hotel that were purchased outside."
     }
   },
   {
@@ -2243,14 +1537,12 @@ const TRANSLATIONS = {
 // ==========================================================================
 const SUBCATEGORIES = {
   "afternoon-tea": [
-    { id: "lanches", pt: "Lanches & Salgados", en: "Savory & Snacks", icon: "🥐" },
+    { id: "lanches", pt: "Lanches", en: "Snacks", icon: "🥐" },
     { id: "doces", pt: "Doces & Frutas", en: "Sweets & Fruits", icon: "🍰" },
     { id: "bebidas", pt: "Cafés & Bebidas", en: "Coffee & Drinks", icon: "☕" }
   ],
   "dinner": [
-    { id: "principais", pt: "Pratos Principais", en: "Main Courses", icon: "🥩" },
-    { id: "entradas", pt: "Entradas & Porções", en: "Starters & Appetizers", icon: "🥗" },
-    { id: "lanches", pt: "Lanches & Sopas", en: "Snacks & Soups", icon: "🥪" },
+    { id: "principais", pt: "Pratos Principais & Sopas", en: "Main Courses & Soups", icon: "🥩" },
     { id: "sobremesas", pt: "Doces & Sobremesas", en: "Sweets & Desserts", icon: "🍨" },
     { id: "bebidas", pt: "Bebidas", en: "Soft Drinks", icon: "🥤" },
     { id: "bebidas-alcoolicas", pt: "Bebidas Alcoólicas", en: "Alcoholic Drinks", icon: "🍷" }
@@ -2470,7 +1762,8 @@ function renderMenu() {
 
 function createMenuCard(item) {
   const card = document.createElement("article");
-  card.className = "menu-card";
+  const hasImage = item.subcategory === "principais";
+  card.className = `menu-card${hasImage ? "" : " no-image"}`;
   card.id = `card-${item.id}`;
   
   // Generate badges html
@@ -2499,9 +1792,11 @@ function createMenuCard(item) {
   const viewDetailsText = TRANSLATIONS[currentLang].btnCardDetails;
 
   card.innerHTML = `
+    ${hasImage ? `
     <div class="menu-card-image-wrapper">
       <img src="${item.image}" alt="${item.name[currentLang]}" class="menu-card-image" loading="lazy">
     </div>
+    ` : ""}
     <div class="menu-card-content">
       <div class="menu-card-header">
         <h3 class="menu-card-title">${item.name[currentLang]}</h3>
@@ -2531,8 +1826,22 @@ function openDetailsModal(itemId) {
   const modalDescription = document.getElementById("modalDescription");
   const modalDietTags = document.getElementById("modalDietTags");
 
-  modalImg.src = item.image;
-  modalImg.alt = item.name[currentLang];
+  const modalImgWrapper = document.querySelector(".modal-image-wrapper");
+  const modalContainer = document.querySelector(".modal-container");
+
+  const hasImage = item.subcategory === "principais";
+  if (hasImage) {
+    modalImgWrapper.style.display = "block";
+    modalContainer.classList.remove("modal-no-image");
+    modalImg.src = item.image;
+    modalImg.alt = item.name[currentLang];
+  } else {
+    modalImgWrapper.style.display = "none";
+    modalContainer.classList.add("modal-no-image");
+    modalImg.src = "";
+    modalImg.alt = "";
+  }
+
   modalTitle.textContent = item.name[currentLang];
 
   const formattedPrice = new Intl.NumberFormat(currentLang === "pt" ? "pt-BR" : "en-US", {

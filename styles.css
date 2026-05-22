@@ -859,23 +859,22 @@ body.text-huge .btn-sub-icon { font-size: 34px; }
 }
 
 .footer-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 4px;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: var(--border-radius-md);
+  padding: 8px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 8px;
 }
 
 .footer-logo-img {
-  height: 36px;
+  height: 96px;
   width: auto;
   object-fit: contain;
-}
-
-.footer-hotel-name {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--theme-text-primary);
+  display: block;
 }
 
 .footer-address {
@@ -1061,4 +1060,13 @@ body.theme-dark .modal-close-btn {
     border-radius: 24px;
     max-height: 80vh;
   }
+}
+
+/* Styling for items/cards without photos */
+.menu-card.no-image {
+  border-top: 3px solid var(--theme-gold);
+}
+
+.modal-container.modal-no-image .modal-body {
+  padding-top: 60px;
 }
