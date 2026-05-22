@@ -383,7 +383,7 @@ const MENU_DATA = [
     category: "dinner",
     subcategory: "principais",
     price: 20.00,
-    tags: ["vegetarian"],
+    tags: ["vegetarian", "lactose-free"],
     image: "images/spaghetti_aglio_olio.jpg",
     name: {
       pt: "Espaguete ao Alho e Óleo",
@@ -415,7 +415,7 @@ const MENU_DATA = [
     category: "dinner",
     subcategory: "principais",
     price: 20.00,
-    tags: [],
+    tags: ["gluten-free", "lactose-free"],
     image: "images/chicken_soup.jpg",
     name: {
       pt: "Sopa Individual",
@@ -1501,7 +1501,6 @@ const TRANSLATIONS = {
     badgeLF: "Sem Lactose",
     badgeVeg: "Vegetariano",
     lblModalIngredients: "Ingredientes / Description:",
-    txtModalAccInfo: "Prato preparado seguindo rígidos padrões de higiene. Para alterações, consulte o garçom.",
     btnModalBack: "Voltar ao Cardápio"
   },
   en: {
@@ -1527,7 +1526,6 @@ const TRANSLATIONS = {
     badgeLF: "Lactose-Free",
     badgeVeg: "Vegetarian",
     lblModalIngredients: "Ingredients / Description:",
-    txtModalAccInfo: "Dish prepared following strict sanitary protocols. For modifications, ask your waiter.",
     btnModalBack: "Back to Menu"
   }
 };
@@ -1542,8 +1540,8 @@ const SUBCATEGORIES = {
     { id: "bebidas", pt: "Cafés & Bebidas", en: "Coffee & Drinks", icon: "☕" }
   ],
   "dinner": [
-    { id: "principais", pt: "Pratos Principais & Sopas", en: "Main Courses & Soups", icon: "🥩" },
-    { id: "sobremesas", pt: "Doces & Sobremesas", en: "Sweets & Desserts", icon: "🍨" },
+    { id: "principais", pt: "Pratos Principais", en: "Main Courses", icon: "🥩" },
+    { id: "sobremesas", pt: "Sobremesas", en: "Desserts", icon: "🍨" },
     { id: "bebidas", pt: "Bebidas", en: "Soft Drinks", icon: "🥤" },
     { id: "bebidas-alcoolicas", pt: "Bebidas Alcoólicas", en: "Alcoholic Drinks", icon: "🍷" }
   ]
@@ -1574,7 +1572,35 @@ const subcategoryNav = document.getElementById("subcategoryNav");
 // ==========================================================================
 // INITIALIZATION
 // ==========================================================================
+function setInitialCategoryByTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+
+  // Chá da tarde até as 18:30h, jantar a partir das 18:31h
+  if (hours < 18 || (hours === 18 && minutes <= 30)) {
+    currentCategory = "afternoon-tea";
+  } else {
+    currentCategory = "dinner";
+  }
+
+  const list = SUBCATEGORIES[currentCategory] || [];
+  if (list.length > 0) {
+    currentSubcategory = list[0].id;
+  }
+
+  // Update tab active state in navigation
+  document.querySelectorAll(".nav-tab").forEach(tab => {
+    if (tab.getAttribute("data-tab") === currentCategory) {
+      tab.classList.add("active");
+    } else {
+      tab.classList.remove("active");
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  setInitialCategoryByTime();
   applyTheme(currentTheme);
   applyTextSize(currentTextSize);
   applyLanguage(currentLang);
@@ -1618,7 +1644,7 @@ function handleFontBtnClick(id) {
   if (id === "btnFontNormal") nextSize = "normal";
   else if (id === "btnFontIncrease") nextSize = "large";
   else if (id === "btnFontHuge") nextSize = "xlarge";
-  
+
   // Highlight active
   document.querySelectorAll(".btn-acc[id^='btnFont']").forEach(btn => btn.classList.remove("active"));
   const activeBtn = document.getElementById(id);
@@ -1674,27 +1700,27 @@ function toggleLanguage() {
 function renderSubcategories() {
   if (!subcategoryNav) return;
   subcategoryNav.innerHTML = "";
-  
+
   const list = SUBCATEGORIES[currentCategory] || [];
   list.forEach(sub => {
     const btn = document.createElement("button");
     btn.className = `btn-sub ${currentSubcategory === sub.id ? "active" : ""}`;
     btn.setAttribute("data-sub", sub.id);
     btn.setAttribute("aria-label", currentLang === "pt" ? `Categoria ${sub.pt}` : `Category ${sub.en}`);
-    
+
     const label = currentLang === "pt" ? sub.pt : sub.en;
     btn.innerHTML = `
       <span class="btn-sub-icon">${sub.icon}</span>
       <span class="btn-sub-label">${label}</span>
     `;
-    
+
     btn.addEventListener("click", () => {
       currentSubcategory = sub.id;
       document.querySelectorAll(".btn-sub").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       renderMenu();
     });
-    
+
     subcategoryNav.appendChild(btn);
   });
 }
@@ -1704,15 +1730,15 @@ function renderSubcategories() {
 // ==========================================================================
 function renderMenu() {
   menuListEl.innerHTML = "";
-  
+
   // Filter items
   const filteredItems = MENU_DATA.filter(item => {
     // Category check
     if (item.category !== currentCategory) return false;
-    
+
     // Subcategory check
     if (item.subcategory !== currentSubcategory) return false;
-    
+
     // Diet check
     if (selectedDiets.size > 0) {
       const matchAllDiets = Array.from(selectedDiets).every(diet => item.tags.includes(diet));
@@ -1753,7 +1779,7 @@ function renderMenu() {
       } else {
         lastSection = null;
       }
-      
+
       const card = createMenuCard(item);
       menuListEl.appendChild(card);
     });
@@ -1765,7 +1791,7 @@ function createMenuCard(item) {
   const hasImage = item.subcategory === "principais";
   card.className = `menu-card${hasImage ? "" : " no-image"}`;
   card.id = `card-${item.id}`;
-  
+
   // Generate badges html
   let badgesHtml = "";
   item.tags.forEach(tag => {
@@ -1898,18 +1924,18 @@ function setupEventListeners() {
       const targetTab = e.currentTarget;
       document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
       targetTab.classList.add("active");
-      
+
       currentCategory = targetTab.getAttribute("data-tab");
-      
+
       // Set default subcategory for the selected category
       const list = SUBCATEGORIES[currentCategory] || [];
       if (list.length > 0) {
         currentSubcategory = list[0].id;
       }
-      
+
       renderSubcategories();
       renderMenu();
-      
+
       // Smooth scroll back to top of menu list
       const navPosition = document.getElementById("categoryNav").getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
@@ -1943,7 +1969,7 @@ function setupEventListeners() {
     chip.addEventListener("click", (e) => {
       const targetChip = e.currentTarget;
       const diet = targetChip.getAttribute("data-diet");
-      
+
       if (selectedDiets.has(diet)) {
         selectedDiets.delete(diet);
         targetChip.classList.remove("active");

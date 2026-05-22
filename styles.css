@@ -1024,22 +1024,7 @@ body.theme-dark .modal-close-btn {
   line-height: 1.6;
 }
 
-.modal-info-box {
-  background-color: var(--theme-bg);
-  border: 2px solid var(--theme-border);
-  border-radius: var(--border-radius-md);
-  padding: 16px;
-  display: flex;
-  gap: 12px;
-  font-size: 15px;
-  color: var(--theme-text-secondary);
-  line-height: 1.4;
-  align-items: flex-start;
-}
 
-.info-icon {
-  font-size: 20px;
-}
 
 .modal-footer {
   padding: 16px 24px 28px;
