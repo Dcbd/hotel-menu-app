@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+    rel="stylesheet">
+
   <style>
     /* Global Styles */
     :root {
@@ -19,13 +22,13 @@
       --text-color: #333333;
       --border-color: #E2DDD5;
     }
-    
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #F4F2EE;
@@ -37,7 +40,9 @@
       min-height: 100vh;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: 'Playfair Display', Georgia, serif;
     }
 
@@ -48,7 +53,7 @@
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 24px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       margin-bottom: 30px;
     }
 
@@ -110,12 +115,24 @@
       background-color: #B28B21;
     }
 
+    .btn-print-elevator {
+      background-color: var(--primary-green);
+      color: white;
+      border: 2px solid var(--gold-accent);
+    }
+
+    .btn-print-elevator:hover {
+      background-color: #245843;
+      border-color: #B28B21;
+    }
+
     /* ==========================================================================
        PRINTABLE TABLE SIGN (PREMIUM DESIGN)
        ========================================================================== */
     .printable-sign {
       width: 100%;
-      max-width: 420px; /* Standard table tent / acrylic display size */
+      max-width: 420px;
+      /* Standard table tent / acrylic display size */
       background-color: var(--cream-bg);
       border: 12px double var(--gold-accent);
       border-radius: 8px;
@@ -177,7 +194,7 @@
       padding: 16px;
       border-radius: 12px;
       border: 2px solid var(--border-color);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -233,6 +250,69 @@
       text-transform: uppercase;
     }
 
+    .printable-sign.elevator-mode {
+      aspect-ratio: 1 / 1;
+      width: 525px;
+      max-width: 525px;
+      height: 525px;
+      padding: 30px 24px;
+      justify-content: center;
+    }
+
+    .printable-sign.elevator-mode .sign-logo-container {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 8px;
+    }
+
+    .printable-sign.elevator-mode .sign-hotel-name {
+      font-size: 22px;
+      margin-bottom: 2px;
+    }
+
+    .printable-sign.elevator-mode .sign-location {
+      font-size: 11px;
+      margin-bottom: 16px;
+    }
+
+    .printable-sign.elevator-mode .qrcode-wrapper {
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+
+    .printable-sign.elevator-mode #qrcode img,
+    .printable-sign.elevator-mode #qrcode canvas {
+      width: 180px !important;
+      height: 180px !important;
+    }
+
+    .printable-sign.elevator-mode .sign-title-pt {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+
+    .printable-sign.elevator-mode .sign-title-en {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .printable-sign.elevator-mode .divider-line {
+      margin: 8px 0;
+    }
+
+    .printable-sign.elevator-mode .sign-desc-pt {
+      font-size: 12px;
+    }
+
+    .printable-sign.elevator-mode .sign-desc-en {
+      font-size: 10px;
+      margin-top: 2px;
+    }
+
+    .printable-sign.elevator-mode .table-number-placeholder {
+      display: none;
+    }
+
     /* ==========================================================================
        PRINT MEDIA QUERIES (CRITICAL FOR PERFECT PRINT)
        ========================================================================== */
@@ -246,14 +326,16 @@
         justify-content: center;
         min-height: 100vh;
       }
-      
+
       .setup-container {
-        display: none; /* Hide configuration panel */
+        display: none;
+        /* Hide configuration panel */
       }
 
       .printable-sign {
         box-shadow: none;
-        border-color: #C59B27 !important; /* Force gold color in print */
+        border-color: #C59B27 !important;
+        /* Force gold color in print */
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
         width: 100%;
@@ -261,15 +343,22 @@
         margin: auto;
         page-break-inside: avoid;
       }
+
+      .printable-sign.elevator-mode {
+        width: 525px !important;
+        max-width: 525px !important;
+        height: 525px !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- SETUP CONTROL BOX (Hidden during print) -->
   <div class="setup-container">
     <h2 style="margin-bottom: 16px; color: var(--primary-green);">Gerador de Placa de Mesa</h2>
-    
+
     <div class="form-group">
       <label for="urlInput">URL do Cardápio (Detectado Automaticamente):</label>
       <input type="url" id="urlInput" class="form-control" placeholder="https://...">
@@ -281,7 +370,11 @@
     </div>
 
     <button id="btnGenerate" class="btn-action">Gerar Novo QR Code</button>
-    <button id="btnPrint" class="btn-action btn-print">🖨️ Imprimir Placa de Mesa</button>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+      <button id="btnPrint" class="btn-action btn-print" style="margin-top: 0;">🖨️ Placa de Mesa</button>
+      <button id="btnPrintElevator" class="btn-action btn-print-elevator" style="margin-top: 0;">🖨️ Placa de
+        Elevador</button>
+    </div>
   </div>
 
   <!-- THE PRINTABLE SIGN CARD -->
@@ -291,7 +384,7 @@
     </div>
     <div class="sign-hotel-name">Hotel Central Parque</div>
     <div class="sign-location">São Lourenço • MG</div>
-    
+
     <!-- QR Code rendered here -->
     <div class="qrcode-wrapper">
       <div id="qrcode"></div>
@@ -299,10 +392,11 @@
 
     <div class="sign-title-pt">CARDÁPIO DIGITAL</div>
     <div class="sign-title-en">Digital Restaurant Menu</div>
-    
+
     <div class="divider-line"></div>
-    
-    <div class="sign-desc-pt">Aponte a câmera do celular para o QR Code para visualizar o cardápio do Chá da Tarde e Jantar.</div>
+
+    <div class="sign-desc-pt">Aponte a câmera do celular para o QR Code para visualizar o cardápio do Chá da Tarde e
+      Jantar.</div>
     <div class="sign-desc-en">Scan the QR code with your phone camera to view the Afternoon Tea and Dinner menus.</div>
 
     <div class="table-number-placeholder" id="tableDisplay">Mesa ___</div>
@@ -310,14 +404,16 @@
 
   <!-- QR Code Generation Library -->
   <script src="qrcode.min.js"></script>
-  
+
   <script>
     const urlInput = document.getElementById("urlInput");
     const tableInput = document.getElementById("tableInput");
     const btnGenerate = document.getElementById("btnGenerate");
     const btnPrint = document.getElementById("btnPrint");
+    const btnPrintElevator = document.getElementById("btnPrintElevator");
     const tableDisplay = document.getElementById("tableDisplay");
-    
+    const signCard = document.getElementById("signCard");
+
     let qrcode = null;
 
     // 1. Auto-detect menu location (points to index.html in the same directory)
@@ -348,15 +444,25 @@
     function updateSign() {
       const url = urlInput.value.trim() || autoDetectUrl();
       const tableText = tableInput.value.trim() || "Mesa ___";
-      
+
       tableDisplay.textContent = tableText;
       renderQRCode(url);
     }
 
     // Event Listeners
     btnGenerate.addEventListener("click", updateSign);
+
     btnPrint.addEventListener("click", () => {
+      signCard.classList.remove("elevator-mode");
       window.print();
+    });
+
+    btnPrintElevator.addEventListener("click", () => {
+      signCard.classList.add("elevator-mode");
+      setTimeout(() => {
+        window.print();
+        signCard.classList.remove("elevator-mode");
+      }, 50);
     });
 
     tableInput.addEventListener("input", () => {
@@ -370,4 +476,5 @@
     };
   </script>
 </body>
+
 </html>
