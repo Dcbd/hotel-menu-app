@@ -368,7 +368,7 @@ const MENU_DATA = [
     subcategory: "principais",
     price: 60.00,
     tags: [],
-    image: "images/buffet.png",
+    image: "images/buffet.jpg",
     name: {
       pt: "Buffet",
       en: "Buffet"
@@ -1490,6 +1490,11 @@ const MENU_DATA = [
   }
 ];
 
+// Assign sequential number IDs to each menu item
+MENU_DATA.forEach((item, index) => {
+  item.number = String(index + 1).padStart(2, '0');
+});
+
 // ==========================================================================
 // TRANSLATION DICTIONARY
 // ==========================================================================
@@ -1763,10 +1768,11 @@ function renderMenu() {
 
     // Search check
     if (searchQuery.trim() !== "") {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery.toLowerCase().replace("#", "").trim();
       const nameMatch = item.name[currentLang].toLowerCase().includes(query);
       const descMatch = item.description[currentLang].toLowerCase().includes(query);
-      if (!nameMatch && !descMatch) return false;
+      const numberMatch = item.number && item.number.includes(query);
+      if (!nameMatch && !descMatch && !numberMatch) return false;
     }
 
     return true;
@@ -1846,9 +1852,12 @@ function createMenuCard(item) {
       </div>
       <p class="menu-card-description">${item.description[currentLang]}</p>
       <div class="menu-card-badges">${badgesHtml}</div>
-      <button class="btn-card-details" aria-haspopup="dialog" onclick="openDetailsModal('${item.id}')">
-        <span>${viewDetailsText}</span> ➔
-      </button>
+      <div class="menu-card-footer">
+        <button class="btn-card-details" aria-haspopup="dialog" onclick="openDetailsModal('${item.id}')">
+          <span>${viewDetailsText}</span> ➔
+        </button>
+        <span class="product-number">${item.number}</span>
+      </div>
     </div>
   `;
 
@@ -1884,7 +1893,7 @@ function openDetailsModal(itemId) {
     modalImg.alt = "";
   }
 
-  modalTitle.textContent = item.name[currentLang];
+  modalTitle.innerHTML = `<span class="product-number">${item.number}</span> ${item.name[currentLang]}`;
 
   const formattedPrice = new Intl.NumberFormat(currentLang === "pt" ? "pt-BR" : "en-US", {
     style: "currency",

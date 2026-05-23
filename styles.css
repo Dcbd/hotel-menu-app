@@ -1055,3 +1055,36 @@ body.theme-dark .modal-close-btn {
 .modal-container.modal-no-image .modal-body {
   padding-top: 60px;
 }
+
+/* Product ID Number Badge */
+.product-number {
+  color: var(--theme-gold);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 700;
+  border: 1px solid var(--theme-gold);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgba(197, 155, 39, 0.08); /* Light mode gold tint */
+  transition: var(--transition-smooth);
+}
+
+/* Margin when the badge is placed in titles (e.g. details modal title) */
+.modal-title .product-number {
+  margin-right: 8px;
+}
+
+body.theme-dark .product-number {
+  background-color: rgba(232, 193, 90, 0.08); /* Dark mode gold tint */
+}
+
+/* Menu Card Footer (holds "Ver Detalhes" and Product ID) */
+.menu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+}
