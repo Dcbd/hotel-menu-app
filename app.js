@@ -363,10 +363,26 @@ const MENU_DATA = [
   // ==========================================
 
   {
+    id: "food-buffet",
+    category: "dinner",
+    subcategory: "principais",
+    price: 60.00,
+    tags: [],
+    image: "images/buffet.png",
+    name: {
+      pt: "Buffet",
+      en: "Buffet"
+    },
+    description: {
+      pt: "Em dias específicos, o restaurante serve exclusivamente nosso buffet especial por R$ 60,00. O cardápio inclui espaguete à bolonhesa, sopas caseiras, estrogonofe e sobremesas. Nesses dias, o menu à la carte não estará disponível.",
+      en: "On select days, the restaurant exclusively serves our special buffet for R$ 60.00. The menu includes spaghetti bolognese, homemade soups, stroganoff, and assorted desserts. On these days, the a la carte menu is not available."
+    }
+  },
+  {
     id: "food-3",
     category: "dinner",
     subcategory: "principais",
-    price: 25.00,
+    price: 30.00,
     tags: [],
     image: "images/spaghetti_bolognese.jpg",
     name: {
@@ -382,7 +398,7 @@ const MENU_DATA = [
     id: "food-4",
     category: "dinner",
     subcategory: "principais",
-    price: 20.00,
+    price: 25.00,
     tags: ["vegetarian", "lactose-free"],
     image: "images/spaghetti_aglio_olio.jpg",
     name: {
@@ -398,7 +414,7 @@ const MENU_DATA = [
     id: "food-5",
     category: "dinner",
     subcategory: "principais",
-    price: 30.00,
+    price: 35.00,
     tags: [],
     image: "images/chicken_stroganoff.jpg",
     name: {
@@ -414,7 +430,7 @@ const MENU_DATA = [
     id: "food-17",
     category: "dinner",
     subcategory: "principais",
-    price: 20.00,
+    price: 25.00,
     tags: ["gluten-free", "lactose-free"],
     image: "images/chicken_soup.jpg",
     name: {
