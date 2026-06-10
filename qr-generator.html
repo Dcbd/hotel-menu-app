@@ -357,16 +357,26 @@
 
   <!-- SETUP CONTROL BOX (Hidden during print) -->
   <div class="setup-container">
-    <h2 style="margin-bottom: 16px; color: var(--primary-green);">Gerador de Placa de Mesa</h2>
+    <h2 style="margin-bottom: 16px; color: var(--primary-green);">Gerador de QR Code</h2>
 
     <div class="form-group">
-      <label for="urlInput">URL do Cardápio (Detectado Automaticamente):</label>
-      <input type="url" id="urlInput" class="form-control" placeholder="https://...">
+      <label for="urlInput">URL Base do Cardápio:</label>
+      <input type="url" id="urlInput" class="form-control" value="https://menu.hotelcentralparque.com.br/">
     </div>
 
     <div class="form-group">
-      <label for="tableInput">Mesa (Opcional - Ex: Mesa 5):</label>
-      <input type="text" id="tableInput" class="form-control" placeholder="Ex: Mesa 03" value="Mesa ___">
+      <label for="pdvSelect">Ponto de Venda (PDV):</label>
+      <select id="pdvSelect" class="form-control" style="background-color: white;">
+        <option value="1">Mesa (Restaurante/Chá)</option>
+        <option value="2">Quarto (Apartamento)</option>
+        <option value="3">Piscina</option>
+        <option value="4">Lobby / Recepção</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="numberInput">Número / Identificador:</label>
+      <input type="number" id="numberInput" class="form-control" placeholder="Ex: 5" value="1" min="1">
     </div>
 
     <button id="btnGenerate" class="btn-action">Gerar Novo QR Code</button>
@@ -399,33 +409,27 @@
       Jantar.</div>
     <div class="sign-desc-en">Scan the QR code with your phone camera to view the Afternoon Tea and Dinner menus.</div>
 
-    <div class="table-number-placeholder" id="tableDisplay">Mesa ___</div>
+    <div class="table-number-placeholder" id="tableDisplay">Mesa 01</div>
   </div>
 
-  <!-- QR Code Generation Library -->
+  <!-- QR Code Generation & Hash Libraries -->
+  <script src="hashids.min.js"></script>
   <script src="qrcode.min.js"></script>
 
   <script>
     const urlInput = document.getElementById("urlInput");
-    const tableInput = document.getElementById("tableInput");
+    const pdvSelect = document.getElementById("pdvSelect");
+    const numberInput = document.getElementById("numberInput");
     const btnGenerate = document.getElementById("btnGenerate");
     const btnPrint = document.getElementById("btnPrint");
     const btnPrintElevator = document.getElementById("btnPrintElevator");
     const tableDisplay = document.getElementById("tableDisplay");
     const signCard = document.getElementById("signCard");
 
+    const hashids = new Hashids("HotelCentralParqueMenu", 6);
     let qrcode = null;
 
-    // 1. Auto-detect menu location (points to index.html in the same directory)
-    function autoDetectUrl() {
-      const currentUrl = window.location.href;
-      // Replace qr-generator.html with index.html
-      const menuUrl = currentUrl.replace("qr-generator.html", "index.html");
-      urlInput.value = menuUrl;
-      return menuUrl;
-    }
-
-    // 2. Generate the QR Code
+    // 1. Generate the QR Code
     function renderQRCode(url) {
       const qrContainer = document.getElementById("qrcode");
       qrContainer.innerHTML = ""; // Clear existing
@@ -440,13 +444,33 @@
       });
     }
 
-    // 3. Update table display and re-generate
+    // 2. Format friendly label and encode URL
     function updateSign() {
-      const url = urlInput.value.trim() || autoDetectUrl();
-      const tableText = tableInput.value.trim() || "Mesa ___";
+      let baseUrl = urlInput.value.trim() || "https://menu.hotelcentralparque.com.br/";
+      if (!baseUrl.endsWith("/")) {
+        baseUrl += "/";
+      }
 
-      tableDisplay.textContent = tableText;
-      renderQRCode(url);
+      const pdvId = parseInt(pdvSelect.value);
+      const number = parseInt(numberInput.value) || 1;
+
+      // Encode pdv and number into hash
+      const hash = hashids.encode(pdvId, number);
+      const fullUrl = `${baseUrl}?${hash}`;
+
+      // Set readable display text on the sign
+      const pdvNames = {
+        1: "Mesa",
+        2: "Quarto",
+        3: "Piscina",
+        4: "Lobby"
+      };
+
+      const paddedNumber = String(number).padStart(2, "0");
+      const friendlyText = `${pdvNames[pdvId]} ${paddedNumber}`;
+
+      tableDisplay.textContent = friendlyText;
+      renderQRCode(fullUrl);
     }
 
     // Event Listeners
@@ -465,14 +489,12 @@
       }, 50);
     });
 
-    tableInput.addEventListener("input", () => {
-      tableDisplay.textContent = tableInput.value.trim() || "Mesa ___";
-    });
+    pdvSelect.addEventListener("change", updateSign);
+    numberInput.addEventListener("input", updateSign);
 
     // Initialize on page load
     window.onload = () => {
-      const detectedUrl = autoDetectUrl();
-      renderQRCode(detectedUrl);
+      updateSign();
     };
   </script>
 </body>

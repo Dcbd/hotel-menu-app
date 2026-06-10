@@ -1620,7 +1620,39 @@ function setInitialCategoryByTime() {
   });
 }
 
+function parseUrlCode() {
+  const hash = window.location.search.substring(1);
+  if (!hash) return;
+
+  try {
+    const hashids = new Hashids("HotelCentralParqueMenu", 6);
+    const decoded = hashids.decode(hash);
+    if (decoded && decoded.length === 2) {
+      const pdvId = decoded[0];
+      const number = decoded[1];
+      
+      const pdvMap = {
+        1: 'mesa',
+        2: 'quarto',
+        3: 'piscina',
+        4: 'lobby'
+      };
+      
+      const pdv = pdvMap[pdvId] || 'desconhecido';
+      
+      sessionStorage.setItem('pdv_id', pdvId);
+      sessionStorage.setItem('pdv_type', pdv);
+      sessionStorage.setItem('pdv_number', number);
+      
+      console.log(`Ponto de Venda detectado: ${pdv} número ${number}`);
+    }
+  } catch (e) {
+    console.error("Erro ao decodificar o código do QR Code:", e);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  parseUrlCode();
   setInitialCategoryByTime();
   applyTheme(currentTheme);
   applyTextSize(currentTextSize);
