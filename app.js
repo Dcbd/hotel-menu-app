@@ -1502,6 +1502,8 @@ const TRANSLATIONS = {
   pt: {
     lblFontSize: "Acessibilidade:",
     heroSubtitle: "Cardápio Digital de Gastronomia",
+    txtTabBreakfast: "Café da Manhã",
+    txtTimeBreakfast: "07:00 - 11:00",
     txtTabAfternoonTea: "Chá da Tarde",
     txtTimeAfternoonTea: "16:00 - 18:30",
     txtTabDinner: "Jantar",
@@ -1515,8 +1517,6 @@ const TRANSLATIONS = {
     btnResetFilters: "Mostrar Todos os Pratos",
     txtServiceTitle: "Dúvidas ou Restrições?",
     txtServiceDesc: "Se você possui alergias severas ou precisa de alguma alteração no prato, por favor fale com a nossa equipe.",
-    txtFooterAddress: "Rua Dr. Mello Viana, 28 - Centro, São Lourenço - MG",
-    txtFooterPhone: "📞 Recepção: (35) 3339-2300 | 🌐 www.hotelcentralparque.com.br",
     btnCardDetails: "Ver Detalhes",
     badgeGF: "Sem Glúten",
     badgeLF: "Sem Lactose",
@@ -1527,6 +1527,8 @@ const TRANSLATIONS = {
   en: {
     lblFontSize: "Accessibility:",
     heroSubtitle: "Digital Dining Menu",
+    txtTabBreakfast: "Breakfast",
+    txtTimeBreakfast: "07:00 AM - 11:00 AM",
     txtTabAfternoonTea: "Afternoon Tea",
     txtTimeAfternoonTea: "4:00 PM - 6:30 PM",
     txtTabDinner: "Dinner",
@@ -1540,8 +1542,6 @@ const TRANSLATIONS = {
     btnResetFilters: "Show All Dishes",
     txtServiceTitle: "Allergies or Requests?",
     txtServiceDesc: "If you have severe allergies or need dish alterations, please let our team know.",
-    txtFooterAddress: "28 Dr. Mello Viana St - Downtown, São Lourenço - MG",
-    txtFooterPhone: "📞 Front Desk: (35) 3339-2300 | 🌐 www.hotelcentralparque.com.br",
     btnCardDetails: "View Details",
     badgeGF: "Gluten-Free",
     badgeLF: "Lactose-Free",
@@ -1571,11 +1571,36 @@ const SUBCATEGORIES = {
 // ==========================================================================
 // APP STATE MANAGEMENT
 // ==========================================================================
+function getInitialCategory() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const totalMinutes = hours * 60 + minutes;
+
+  if (totalMinutes >= 0 && totalMinutes < 12 * 60) {
+    return "breakfast";
+  } else if (totalMinutes >= 12 * 60 && totalMinutes < (18 * 60 + 30)) {
+    return "afternoon-tea";
+  } else {
+    return "dinner";
+  }
+}
+
+function updateActiveTab() {
+  document.querySelectorAll(".nav-tab").forEach(tab => {
+    if (tab.getAttribute("data-tab") === currentCategory) {
+      tab.classList.add("active");
+    } else {
+      tab.classList.remove("active");
+    }
+  });
+}
+
 let currentLang = localStorage.getItem("lang") || "pt";
 let currentTheme = localStorage.getItem("theme") || "light";
 let currentTextSize = localStorage.getItem("textSize") || "normal";
-let currentCategory = "afternoon-tea";
-let currentSubcategory = "lanches";
+let currentCategory = getInitialCategory();
+let currentSubcategory = currentCategory === "breakfast" ? "" : "lanches";
 let searchQuery = "";
 let selectedDiets = new Set();
 
@@ -1653,7 +1678,7 @@ function parseUrlCode() {
 
 document.addEventListener("DOMContentLoaded", () => {
   parseUrlCode();
-  setInitialCategoryByTime();
+  updateActiveTab();
   applyTheme(currentTheme);
   applyTextSize(currentTextSize);
   applyLanguage(currentLang);
@@ -1782,6 +1807,37 @@ function renderSubcategories() {
 // RENDER MENU
 // ==========================================================================
 function renderMenu() {
+  const searchFilterSec = document.getElementById("searchFilterSection");
+  const serviceSec = document.getElementById("serviceSection");
+  
+  if (currentCategory === "breakfast") {
+    if (subcategoryContainer) subcategoryContainer.style.display = "none";
+    if (searchFilterSec) searchFilterSec.style.display = "none";
+    if (noResultsMessage) noResultsMessage.style.display = "none";
+    if (serviceSec) serviceSec.style.display = "none";
+    
+    menuListEl.style.display = "flex";
+    menuListEl.innerHTML = `
+      <div class="breakfast-info-card">
+        <div class="breakfast-info-icon">🍳</div>
+        <h2 class="breakfast-info-title">${currentLang === 'pt' ? 'Serviço de Café da Manhã' : 'Breakfast Service'}</h2>
+        <p class="breakfast-info-time">⏰ 07:00 - 11:00</p>
+        <hr class="breakfast-divider">
+        
+        <ul class="breakfast-info-list">
+          <li>${currentLang === 'pt' ? 'É possível solicitar ao garçom por omeletes preparados na hora.' : 'You may request freshly made omelets directly from the waiter.'}</li>
+          <li>${currentLang === 'pt' ? 'Caso possua restrições alimentares, por favor informe a nossa equipe.' : 'Please inform our staff if you have any dietary restrictions.'}</li>
+          <li>${currentLang === 'pt' ? 'Caso tenha dificuldades de locomoção, nossos garçons estão à disposição para servir os alimentos diretamente em sua mesa.' : 'If you have mobility difficulties, our waiters are available to serve food directly to your table.'}</li>
+        </ul>
+      </div>
+    `;
+    return;
+  } else {
+    if (subcategoryContainer) subcategoryContainer.style.display = "block";
+    if (searchFilterSec) searchFilterSec.style.display = "block";
+    if (serviceSec) serviceSec.style.display = "block";
+  }
+
   menuListEl.innerHTML = "";
 
   // Filter items
@@ -1845,7 +1901,20 @@ function createMenuCard(item) {
   const hasImage = item.subcategory === "principais";
   card.className = `menu-card${hasImage ? "" : " no-image"}`;
   card.id = `card-${item.id}`;
-
+  
+  // Accessibility and interactivity for the card
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-haspopup", "dialog");
+  
+  card.addEventListener("click", () => openDetailsModal(item.id));
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openDetailsModal(item.id);
+    }
+  });
+  
   // Generate badges html
   let badgesHtml = "";
   item.tags.forEach(tag => {
@@ -1869,8 +1938,6 @@ function createMenuCard(item) {
     currency: "BRL"
   }).format(item.price);
 
-  const viewDetailsText = TRANSLATIONS[currentLang].btnCardDetails;
-
   card.innerHTML = `
     ${hasImage ? `
     <div class="menu-card-image-wrapper">
@@ -1884,12 +1951,11 @@ function createMenuCard(item) {
       </div>
       <p class="menu-card-description">${item.description[currentLang]}</p>
       <div class="menu-card-badges">${badgesHtml}</div>
+      ${item.number ? `
       <div class="menu-card-footer">
-        <button class="btn-card-details" aria-haspopup="dialog" onclick="openDetailsModal('${item.id}')">
-          <span>${viewDetailsText}</span> ➔
-        </button>
         <span class="product-number">${item.number}</span>
       </div>
+      ` : ""}
     </div>
   `;
 
@@ -1988,6 +2054,8 @@ function setupEventListeners() {
       const list = SUBCATEGORIES[currentCategory] || [];
       if (list.length > 0) {
         currentSubcategory = list[0].id;
+      } else {
+        currentSubcategory = "";
       }
 
       renderSubcategories();

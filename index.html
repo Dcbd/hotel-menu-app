@@ -66,13 +66,15 @@
 
     <!-- CATEGORY NAVIGATION (STICKY TABS) -->
     <nav class="category-nav" id="categoryNav" aria-label="Menu Sections">
-      <button class="nav-tab active" id="tabAfternoonTea" data-tab="afternoon-tea">
-        <span class="tab-icon">☕</span>
+      <button class="nav-tab" id="tabBreakfast" data-tab="breakfast">
+        <span class="tab-title" id="txtTabBreakfast">Café da Manhã</span>
+        <span class="tab-time" id="txtTimeBreakfast">07:00 - 11:00</span>
+      </button>
+      <button class="nav-tab" id="tabAfternoonTea" data-tab="afternoon-tea">
         <span class="tab-title" id="txtTabAfternoonTea">Chá da Tarde</span>
         <span class="tab-time" id="txtTimeAfternoonTea">16:00 - 18:30</span>
       </button>
       <button class="nav-tab" id="tabDinner" data-tab="dinner">
-        <span class="tab-icon">🍽️</span>
         <span class="tab-title" id="txtTabDinner">Jantar</span>
         <span class="tab-time" id="txtTimeDinner">19:00 - 21:30</span>
       </button>
@@ -134,17 +136,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="mainFooter">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <img src="images/Logomarca.png" alt="Logomarca Hotel Central Parque" class="footer-logo-img">
-      </div>
-      <p class="footer-address" id="txtFooterAddress">Rua Dr. Mello Viana, 28 - Centro, São Lourenço - MG</p>
-      <p class="footer-phone" id="txtFooterPhone">📞 Recepção: (35) 3339-2300 | 🌐 www.hotelcentralparque.com.br</p>
-      <p class="footer-copyright">&copy; 2026 Hotel Central Parque. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+
 
   <!-- DETAIL POPUP MODAL -->
   <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-hidden="true">
