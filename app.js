@@ -1950,12 +1950,10 @@ function createMenuCard(item) {
         <span class="menu-card-price">${formattedPrice}</span>
       </div>
       <p class="menu-card-description">${item.description[currentLang]}</p>
-      <div class="menu-card-badges">${badgesHtml}</div>
-      ${item.number ? `
       <div class="menu-card-footer">
-        <span class="product-number">${item.number}</span>
+        <div class="menu-card-badges">${badgesHtml}</div>
+        ${item.number ? `<span class="product-number">${item.number}</span>` : ""}
       </div>
-      ` : ""}
     </div>
   `;
 

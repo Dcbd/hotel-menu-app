@@ -1035,6 +1035,7 @@ body.theme-dark .modal-close-btn {
   display: inline-block;
   vertical-align: middle;
   background-color: rgba(197, 155, 39, 0.08); /* Light mode gold tint */
+  margin-left: auto;
   transition: var(--transition-smooth);
 }
 
