@@ -343,7 +343,9 @@ body.theme-dark .theme-icon-dark {
   background-color: var(--theme-bg);
   display: flex;
   gap: 12px;
-  padding: 12px 4px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 12px 20px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Hide scrollbars for layout beauty */
@@ -416,7 +418,9 @@ body.theme-dark .theme-icon-dark {
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  padding: 4px 4px 8px 4px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 4px 20px 8px 20px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Hide scrollbars for layout beauty */
 }
