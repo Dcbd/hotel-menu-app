@@ -23,12 +23,8 @@
       <!-- Font Size Adjuster -->
       <div class="accessibility-group">
         <span class="accessibility-label" id="lblFontSize">Acessibilidade:</span>
-        <button class="btn-acc active" id="btnFontNormal" aria-label="Tamanho de texto normal"
-          title="Texto Normal">A</button>
-        <button class="btn-acc" id="btnFontIncrease" aria-label="Aumentar tamanho do texto"
-          title="Aumentar texto">A+</button>
-        <button class="btn-acc" id="btnFontHuge" aria-label="Aumentar muito o tamanho do texto"
-          title="Texto Grande">A++</button>
+        <button class="btn-acc" id="btnFontToggle" aria-label="Alternar aumento de texto (A+)"
+          title="Aumentar texto (A+)">A+</button>
       </div>
       <!-- Theme Switcher -->
       <div class="accessibility-group">
@@ -37,10 +33,35 @@
           <span class="theme-icon-light">☀️</span>
           <span class="theme-icon-dark">🌙</span>
         </button>
-        <!-- Language Switcher -->
-        <button class="btn-acc lang-toggle" id="btnLangToggle" aria-label="Change language to English">
-          <span class="lang-text">EN</span>
-        </button>
+        <!-- Language Switcher Dropdown -->
+        <div class="lang-dropdown-wrapper" id="langDropdownWrapper">
+          <button class="btn-acc lang-toggle-btn" id="btnLangToggle" aria-label="Selecionar Idioma" title="Selecionar Idioma / Select Language" aria-expanded="false">
+            <span class="lang-flag" id="currentLangFlag">🇧🇷</span>
+            <span class="dropdown-chevron">▾</span>
+          </button>
+          <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+            <button class="lang-option active" data-lang="pt" role="menuitem">
+              <span class="flag-icon">🇧🇷</span>
+              <span class="lang-name">Português</span>
+            </button>
+            <button class="lang-option" data-lang="en" role="menuitem">
+              <span class="flag-icon">🇺🇸</span>
+              <span class="lang-name">English</span>
+            </button>
+            <button class="lang-option" data-lang="es" role="menuitem">
+              <span class="flag-icon">🇪🇸</span>
+              <span class="lang-name">Español</span>
+            </button>
+            <button class="lang-option" data-lang="ja" role="menuitem">
+              <span class="flag-icon">🇯🇵</span>
+              <span class="lang-name">日本語</span>
+            </button>
+            <button class="lang-option" data-lang="zh" role="menuitem">
+              <span class="flag-icon">🇨🇳</span>
+              <span class="lang-name">中文</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
