@@ -77,7 +77,7 @@ const MENU_DATA = [
     name: {
       pt: "Pão com Manteiga",
       en: "Bread with Butter",
-      es: "Pan con Mantequilla de la Granja",
+      es: "Pan con Mantequilla",
       ja: "バターパン",
       zh: "黄油面包"
     },
@@ -165,7 +165,7 @@ const MENU_DATA = [
     name: {
       pt: "Ovos Mexidos",
       en: "Scrambled Eggs",
-      es: "Huevos Revueltos a la Manteca",
+      es: "Huevos Revueltos",
       ja: "スクランブルエッグ",
       zh: "美式炒蛋"
     },
@@ -187,9 +187,9 @@ const MENU_DATA = [
     name: {
       pt: "Mingau",
       en: "Porridge",
-      es: "Gachas / Porridge Cremoso",
-      ja: "温かいおかゆ（ポリッジ）",
-      zh: "热牛奶麦片粥/玉米粥"
+      es: "Gachas / Porridge",
+      ja: "おかゆ（ポリッジ）",
+      zh: "麦片粥"
     },
     description: {
       pt: "Prato fundo de mingau quentinho e cremoso de Aveia, Fubá ou Maisena com leite integral.",
@@ -220,7 +220,7 @@ const MENU_DATA = [
       pt: "Fatia de bolo caseiro artesanal preparado no dia. Consulte os sabores disponíveis.",
       en: "Slice of homemade artisanal cake baked fresh daily. Please ask our team for today's flavors.",
       es: "Porción de pastel casero artesanal horneado en el día. Consulte los sabores disponibles.",
-      ja: "毎日焼き上げる自家製パウンドケーキ。本日の味はスタッフにお尋ねください。",
+      ja: "毎日焼き上げる自家製ケーキ。本日の味はスタッフにお尋ねください。",
       zh: "每日新鲜烘焙的家常手作蛋糕，具体口味请咨询工作人员。"
     }
   },
@@ -427,7 +427,7 @@ const MENU_DATA = [
     name: {
       pt: "Vitamina de Frutas",
       en: "Fruit Smoothie",
-      es: "Licuado de Frutas con Leche",
+      es: "Licuado de Frutas",
       ja: "フルーツスムージー",
       zh: "综合水果奶昔"
     },
@@ -524,9 +524,9 @@ const MENU_DATA = [
     description: {
       pt: "Em dias específicos, o restaurante serve exclusivamente nosso buffet especial por R$ 60,00. O cardápio inclui espaguete à bolonhesa, sopas caseiras, estrogonofe e sobremesas. Nesses dias, o menu à la carte não estará disponível.",
       en: "On select days, the restaurant exclusively serves our special buffet for R$ 60.00. The menu includes spaghetti bolognese, homemade soups, stroganoff, and assorted desserts. On these days, the a la carte menu is not available.",
-      es: "En días específicos, el restaurante sirve exclusivamente nuestro buffet especial por R$ 60,00. Incluye espaguetis a la boloñesa, sopas caseras, estrogonofe y postres variados.",
+      es: "En días específicos, el restaurante sirve exclusivamente nuestro buffet especial por R$ 60,00. Incluye espaguetis a la boloñesa, sopas caseras, Stroganoff y postres variados.",
       ja: "特定日限定のスペシャルビュッフェ（R$ 60,00）。ボロネーゼパスタ、自家製スープ、ストロガノフ、デザート等をご自由にお楽しみいただけます。",
-      zh: "特定日期特供自助餐（R$ 60.00）。包含肉酱意面、家常靓汤、炖牛肉/鸡肉及精选甜点。自助餐开放期间暂不提供单点。"
+      zh: "特定日期特供自助餐（R$ 60.00）。包含肉酱意面、家常靓汤、斯特罗加诺夫及精选甜点。自助餐开放期间暂不提供单点。"
     }
   },
   {
@@ -562,7 +562,7 @@ const MENU_DATA = [
       pt: "Espaguete ao Alho e Óleo",
       en: "Spaghetti Aglio e Olio",
       es: "Espaguetis al Ajo y Aceite (Aglio e Olio)",
-      ja: "スパゲッティ・アリオ・オリオ（蒜香橄榄油面）",
+      ja: "スパゲッティ・アリオ・オリオ",
       zh: "蒜香橄榄油意面"
     },
     description: {
@@ -605,14 +605,14 @@ const MENU_DATA = [
     name: {
       pt: "Sopa Individual",
       en: "Individual Soup",
-      es: "Sopa Individual de la Casa",
-      ja: "特製温かいスープ",
-      zh: "暖胃特制汤品"
+      es: "Sopa Individual",
+      ja: "一人前スープ",
+      zh: "单人份汤"
     },
     description: {
       pt: "Canja de galinha quentinha servida com pão fatiado, torrada e manteiga. Consulte outras opções de sopa no ramal 268.",
       en: "Warm chicken soup served with sliced bread, toast, and butter. Check other soup options by calling front desk extension 268.",
-      es: "Sopa caliente de pollo (Canja) servida con pan fatiado, tostadas y mantequilla. Consulte otras opciones en el ramal 268.",
+      es: "Sopa caliente de pollo (Canja) servida con pan rebanado, tostadas y mantequilla. Consulte otras opciones en el ramal 268.",
       ja: "チキン＆ライスの温かいスープ、トーストパンとバター添え。他のスープは内線268まで。",
       zh: "温热鸡汤配切片面包、吐司及黄油。了解今日其他汤品请拨分机 268。"
     }
@@ -640,7 +640,7 @@ const MENU_DATA = [
       pt: "Fatia de bolo caseiro artesanal preparado no dia. Consulte os sabores disponíveis.",
       en: "Slice of homemade artisanal cake baked fresh daily. Please ask our team for today's flavors.",
       es: "Porción de pastel casero artesanal horneado en el día. Consulte los sabores disponibles.",
-      ja: "毎日焼き上げる自家製パウンドケーキ。本日の味はスタッフにお尋ねください。",
+      ja: "毎日焼き上げる自家製ケーキ。本日の味はスタッフにお尋ねください。",
       zh: "每日新鲜烘焙的家常手作蛋糕，具体口味请咨询工作人员。"
     }
   },
@@ -1499,7 +1499,7 @@ const MENU_DATA = [
     name: {
       pt: "Vinho do Porto (Dose)",
       en: "Port Wine (Shot)",
-      es: "Vino de Oporto (Copa)",
+      es: "Vino de Oporto (Dosis)",
       ja: "ポートワイン（グラス）",
       zh: "波特强化甜葡萄酒（单杯）"
     },
@@ -1587,7 +1587,7 @@ const MENU_DATA = [
     name: {
       pt: "Whisky Ballantine's 8 Anos (Dose)",
       en: "Ballantine's 8 Years Whisky (Shot)",
-      es: "Whisky Ballantine's 8 Años (Copa)",
+      es: "Whisky Ballantine's 8 Años (Dosis)",
       ja: "バランタイン 8年（ショット）",
       zh: "百龄坛 8年威士忌（单杯）"
     },
@@ -1616,7 +1616,7 @@ const MENU_DATA = [
     name: {
       pt: "Whisky Chivas Regal 12 Anos (Dose)",
       en: "Chivas Regal 12 Years Whisky (Shot)",
-      es: "Whisky Chivas Regal 12 Años (Copa)",
+      es: "Whisky Chivas Regal 12 Años (Dosis)",
       ja: "シーバスリーガル 12年（ショット）",
       zh: "芝华士 12年威士忌（单杯）"
     },
@@ -1645,7 +1645,7 @@ const MENU_DATA = [
     name: {
       pt: "Whisky Grant's 8 Anos (Dose)",
       en: "Grant's 8 Years Whisky (Shot)",
-      es: "Whisky Grant's 8 Años (Copa)",
+      es: "Whisky Grant's 8 Años (Dosis)",
       ja: "グランツ 8年（ショット）",
       zh: "格兰 8年威士忌（单杯）"
     },
@@ -1674,7 +1674,7 @@ const MENU_DATA = [
     name: {
       pt: "Whisky Passport Scotch (Dose)",
       en: "Passport Scotch Whisky (Shot)",
-      es: "Whisky Passport Scotch (Copa)",
+      es: "Whisky Passport Scotch (Dosis)",
       ja: "パスポート スコッチ（ショット）",
       zh: "护照苏格兰威士忌（单杯）"
     },
@@ -1703,7 +1703,7 @@ const MENU_DATA = [
     name: {
       pt: "Whisky Johnnie Walker Red Label (Dose)",
       en: "Johnnie Walker Red Label Whisky (Shot)",
-      es: "Whisky Johnnie Walker Red Label (Copa)",
+      es: "Whisky Johnnie Walker Red Label (Dosis)",
       ja: "ジョニーウォーカー レッドラベル（ショット）",
       zh: "尊尼获加红牌威士忌（单杯）"
     },
@@ -1732,7 +1732,7 @@ const MENU_DATA = [
     name: {
       pt: "Conhaque Domecq (Dose)",
       en: "Domecq Brandy (Shot)",
-      es: "Coñac Domecq (Copa)",
+      es: "Coñac Domecq (Dosis)",
       ja: "ドメック ブランデー（ショット）",
       zh: "Domecq 白兰地（单杯）"
     },
@@ -1761,7 +1761,7 @@ const MENU_DATA = [
     name: {
       pt: "Conhaque Dreher (Dose)",
       en: "Dreher Brandy (Shot)",
-      es: "Coñac Dreher (Copa)",
+      es: "Coñac Dreher (Dosis)",
       ja: "ドレーハー ブランデー（ショット）",
       zh: "Dreher 白兰地（单杯）"
     },
@@ -1790,7 +1790,7 @@ const MENU_DATA = [
     name: {
       pt: "Cachaça (Dose)",
       en: "Cachaça (Shot)",
-      es: "Cachaça Brasileña (Copa)",
+      es: "Cachaça Brasileña (Dosis)",
       ja: "カシャーサ（ブラジル甘蔗酒）",
       zh: "巴西甘蔗烈酒 Cachaça（单杯）"
     },
@@ -1819,7 +1819,7 @@ const MENU_DATA = [
     name: {
       pt: "Gin (Dose)",
       en: "Gin (Shot)",
-      es: "Ginebra Gin (Copa)",
+      es: "Ginebra Gin (Dosis)",
       ja: "ジン（ショット）",
       zh: "金酒 Gin（单杯）"
     },
@@ -1848,7 +1848,7 @@ const MENU_DATA = [
     name: {
       pt: "Rum (Dose)",
       en: "Rum (Shot)",
-      es: "Ron Caribeño (Copa)",
+      es: "Ron Caribeño (Dosis)",
       ja: "ラム（ショット）",
       zh: "朗姆酒 Rum（单杯）"
     },
@@ -1877,7 +1877,7 @@ const MENU_DATA = [
     name: {
       pt: "Vodka (Dose)",
       en: "Vodka (Shot)",
-      es: "Vodka (Copa)",
+      es: "Vodka (Dosis)",
       ja: "ウォッカ（ショット）",
       zh: "伏特加 Vodka（单杯）"
     },
@@ -1907,7 +1907,7 @@ const MENU_DATA = [
     name: {
       pt: "Licor Amarula (Dose)",
       en: "Amarula Cream Liqueur (Shot)",
-      es: "Licor Amarula (Copa)",
+      es: "Licor Amarula (Dosis)",
       ja: "アマルーラ リキュール（ショット）",
       zh: "阿玛鲁拉大象奶油酒（单杯）"
     },
@@ -1936,7 +1936,7 @@ const MENU_DATA = [
     name: {
       pt: "Campari (Dose)",
       en: "Campari (Shot)",
-      es: "Campari (Copa)",
+      es: "Campari (Dosis)",
       ja: "カンパリ（ショット）",
       zh: "金巴利 Campari（单杯）"
     },
@@ -1944,7 +1944,7 @@ const MENU_DATA = [
       pt: "Uma dose do clássico aperitivo amargo italiano de coloração vermelha.",
       en: "A shot of the classic Italian bitter herbal aperitif.",
       es: "Una copa del clásico aperitivo amargo italiano de tono rojo.",
-      ja: "鮮やかな赤色とハーブのほろ苦さが徴の伝統イタリアンアペリティフ。",
+      ja: "鮮やかな赤色とハーブのほろ苦さが特徴の伝統イタリアンアペリティフ。",
       zh: "标志性红色的经典意大利苦味草本餐前酒单杯。"
     }
   },
@@ -1965,7 +1965,7 @@ const MENU_DATA = [
     name: {
       pt: "Vermute Cinzano (Dose)",
       en: "Cinzano Vermouth (Shot)",
-      es: "Vermut Cinzano (Copa)",
+      es: "Vermut Cinzano (Dosis)",
       ja: "チンザノ ベルモット（ショット）",
       zh: "全赞诺味美思 Cinzano（单杯）"
     },
@@ -1994,7 +1994,7 @@ const MENU_DATA = [
     name: {
       pt: "Licor Cointreau (Dose)",
       en: "Cointreau Liqueur (Shot)",
-      es: "Licor Cointreau (Copa)",
+      es: "Licor Cointreau (Dosis)",
       ja: "コアントロー（ショット）",
       zh: "君度橙酒 Cointreau（单杯）"
     },
@@ -2023,7 +2023,7 @@ const MENU_DATA = [
     name: {
       pt: "Licor Frangelico (Dose)",
       en: "Frangelico Liqueur (Shot)",
-      es: "Licor Frangelico (Copa)",
+      es: "Licor Frangelico (Dosis)",
       ja: "フランジェリコ（ショット）",
       zh: "榛子力娇酒 Frangelico（单杯）"
     },
@@ -2052,7 +2052,7 @@ const MENU_DATA = [
     name: {
       pt: "Licores Nacionais (Dose)",
       en: "National Liqueurs (Shot)",
-      es: "Licores Nacionales (Copa)",
+      es: "Licores Nacionales (Dosis)",
       ja: "国産リキュール（ショット）",
       zh: "国产精选力娇酒（单杯）"
     },
@@ -2060,7 +2060,7 @@ const MENU_DATA = [
       pt: "Dose de licor nacional. Sabores: Menta, Cacau, Cereja, Strega, Tangerina ou Laranja.",
       en: "A shot of Brazilian liqueur. Flavors: Mint, Cocoa, Cherry, Strega, Tangerine, or Orange.",
       es: "Copa de licor nacional. Sabores: Menta, Cacao, Cereza, Strega, Mandarina o Naranja.",
-      ja: "国産リキュールショット（ミント、カカオ、チェリー、オレンジ等）。",
+      ja: "国産リキュールショット（ミント、カカオ、チェリー、ストレガ、タンジェリン、オレンジ等）。",
       zh: "单杯巴西国产力娇酒（薄荷、可可、樱桃、柑橘等口味可选）。"
     }
   },
@@ -2081,7 +2081,7 @@ const MENU_DATA = [
     name: {
       pt: "Licor Manischewitz Cereja (Dose)",
       en: "Manischewitz Cherry Liqueur (Shot)",
-      es: "Licor Manischewitz Cereza (Copa)",
+      es: "Licor Manischewitz Cereza (Dosis)",
       ja: "マニシェヴィッツ チェリー（ショット）",
       zh: "曼尼舍维茨樱桃酒（单杯）"
     },
@@ -2110,7 +2110,7 @@ const MENU_DATA = [
     name: {
       pt: "Martini Vermute (Dose)",
       en: "Martini Vermouth (Shot)",
-      es: "Martini Vermut (Copa)",
+      es: "Martini Vermut (Dosis)",
       ja: "マルティーニ ベルモット（ショット）",
       zh: "马天尼味美思 Martini（单杯）"
     },
@@ -2245,7 +2245,7 @@ const TRANSLATIONS = {
     txtServiceDesc: "食事制限や料理の変更のご希望がございましたら、スタッフにお気軽にお声がけください。",
     btnCardDetails: "詳細を見る",
     badgeGF: "グルテンフリー",
-    badgeLF: "乳製品不使用",
+    badgeLF: "ラクトースフリー",
     badgeVeg: "ベジタリアン",
     lblModalIngredients: "原材料・商品説明:",
     btnModalBack: "メニューに戻る"
