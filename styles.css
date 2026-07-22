@@ -418,11 +418,10 @@ body.theme-dark .theme-icon-dark {
 }
 
 /* ==========================================================================
-   STICKY CATEGORY TABS
+   CATEGORY TABS
    ========================================================================== */
 .category-nav {
-  position: sticky;
-  top: 60px; /* Directly below accessibility bar */
+  position: relative;
   background-color: var(--theme-bg);
   display: flex;
   gap: 12px;
@@ -433,7 +432,7 @@ body.theme-dark .theme-icon-dark {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Hide scrollbars for layout beauty */
   border-bottom: 2px solid var(--theme-border);
-  z-index: 900;
+  z-index: 10;
   box-shadow: 0 4px 6px -6px var(--theme-shadow);
 }
 
